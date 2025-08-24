@@ -1,26 +1,63 @@
 @import "tailwindcss";
 
 :root {
+  /* Base colors */
   --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
+  --foreground: #0b0f1a;
+  /* Navy brand palette */
+  --brand-blue: #0f2d6b; /* primary navy */
+  --brand-blue-dark: #0b224f; /* darker side for contrast */
+  --navy-900: #0b1a3a; /* dark surfaces */
+  --navy-800: #112656; /* slightly lighter dark */
+  --muted: #f5f7fb;
+  --border: #e5e7eb;
+  /* Aliases used in className via var() */
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-brand: var(--brand-blue);
+  --color-brand-dark: var(--brand-blue-dark);
+  --color-muted: var(--muted);
+  --color-border: var(--border);
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: var(--navy-900);
+    --foreground: #e8ecf8;
   }
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sen), ui-sans-serif, system-ui, -apple-system,
+    Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+}
+
+/* Local Mooxy font for logo wordmark */
+@font-face {
+  font-family: "Mooxy";
+  src: url("/fonts/mooxy.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+
+.font-logo {
+  font-family: var(--font-mooxy), Mooxy, ui-sans-serif;
+  letter-spacing: 0.02em;
+}
+
+/* Simple utility for sphere gradient backgrounds */
+.bg-brand-sphere {
+  background: radial-gradient(
+      60% 60% at 65% 40%,
+      color-mix(in oklch, var(--color-brand) 90%, black 0%) 0%,
+      transparent 70%
+    ),
+    radial-gradient(
+      55% 55% at 35% 60%,
+      var(--color-brand-dark) 0%,
+      transparent 75%
+    );
 }
