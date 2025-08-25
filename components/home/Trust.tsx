@@ -129,7 +129,7 @@ export default function Trust({
         <div className={styles.headingRow}>
           <FiShield className={styles.icon} />
           <h2 id="trust-heading">Trusted by teams</h2>
-          <span className={styles.dot} aria-hidden />
+          <span className={`${styles.dot}`} aria-hidden />
           <FiStar className={styles.icon} />
         </div>
 

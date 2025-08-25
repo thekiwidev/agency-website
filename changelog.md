@@ -23,10 +23,53 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Marquee container background made transparent for cleaner appearance
 - All colors updated to match Hero section's white-on-navy design system
 
+- Color system migrated from CSS variables to Tailwind v4 tokens (`@theme`)
+  and utilities. Replaced `bg-[var(--…)]`, `text-[var(--…)]`, `border-[var(--…)]`
+  across the codebase with `bg-*`, `text-*`, `border-*`, `divide-*`, `ring-*`
+  using tokens: `background`, `foreground`, `brand`, `muted`, `border`,
+  `navy-900`, `navy-800`.
+
+- Components refactored to tokens:
+
+  - `app/globals.css` (define tokens, base mappings; keep gradient utility)
+  - `components/shared/header.tsx`
+  - `components/shared/footer.tsx`
+  - `components/home/Hero.tsx`
+  - `components/home/Process.tsx`
+  - `components/home/CaseHighlight.tsx`
+  - `components/home/Testimonials.tsx`
+  - `components/home/TechStrip.tsx`
+  - `components/home/FAQ.tsx`
+  - `components/home/FinalCTA.tsx`
+  - `components/ui/button.tsx`
+  - `app/not-found.tsx`
+  - `services/marquee.module.css` (kept `color-mix` with token vars for look)
+
+- Services section redesigned (`components/home/Services.tsx`):
+  - Dark mosaic variant on `bg-navy-900` with `text-foreground-dark`.
+  - 6-col mosaic: first two cards span 3 cols, next three span 2.
+  - Offset-aware layout via `offsetClasses` and `textPaddingClasses` for balanced image/text.
+  - Cards use `bg-white/5`, `border-white/10`, blur, and hover ring glow (`ring-blue-400/40`).
+  - Updated copy and highlight pills (`bg-white/10`, `border-white/20`).
+  - CTA button uses white inversion for contrast.
+  - Images referenced from `/images/*.png` with tuned `sizes` for perf.
+
 ### Fixed - v0.2.0
 
 - Trust component file corruption issues resolved
 - Icon imports properly configured for Feather Icons and Simple Icons
+
+### Technical - v0.2.0
+
+- Tailwind v4 pipeline via `@tailwindcss/postcss`; tokens live in
+  `@theme` and are consumable as `bg-foreground`, `bg-brand`, etc.
+- Complex gradients remain custom CSS using `color-mix` with token vars.
+- Build verified with Turbopack.
+
+### Rollback
+
+- To revert token usage, restore prior `:root` variables and replace
+  `bg/text/border-*` classes with `var(--...)` arbitrary values in components.
 
 ## [0.1.0] - 2025-08-23
 

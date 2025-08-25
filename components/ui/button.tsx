@@ -22,11 +22,11 @@ const sizes = {
 };
 const variants = {
   primary:
-    "bg-[var(--color-brand)] text-white hover:bg-[color-mix(in_oklch,var(--color-brand),black_10%)] focus-visible:ring-[var(--color-brand)]",
+    "bg-brand text-white hover:bg-[color-mix(in_oklch,var(--color-brand),black_10%)] focus-visible:ring-brand",
   secondary:
     "bg-foreground text-background hover:opacity-90 focus-visible:ring-foreground",
   ghost:
-    "bg-transparent text-foreground border border-[var(--color-border)] hover:bg-[var(--color-muted)] focus-visible:ring-[var(--color-brand)]",
+    "bg-transparent text-foreground border border-border hover:bg-muted focus-visible:ring-brand",
 };
 
 export function Button({

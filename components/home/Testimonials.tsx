@@ -15,10 +15,7 @@ export default function Testimonials() {
     <section className="py-14 bg-white">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 grid md:grid-cols-3 gap-6">
         {quotes.map((t) => (
-          <figure
-            key={t.q}
-            className="rounded-xl border border-[var(--color-border)] p-6"
-          >
+          <figure key={t.q} className="rounded-xl border border-border p-6">
             <blockquote className="text-lg">“{t.q}”</blockquote>
             <figcaption className="mt-3 text-sm text-foreground/70">
               — {t.a}

@@ -1,6 +1,7 @@
 .section {
   color: var(--color-foreground);
   padding: 3rem 0;
+  background-color: var(--color-navy-900);
 }
 .container {
   max-width: 80rem;
@@ -12,6 +13,7 @@
 .headingRow {
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 0.5rem;
   color: #dbeafe;
   font-size: 0.9rem;
@@ -28,7 +30,7 @@
 .dot {
   width: 0.5rem;
   height: 0.5rem;
-  background: color-mix(in oklch, var(--color-brand) 55%, white 0%);
+  background: var(--color-foreground);
   border-radius: 9999px;
   display: inline-block;
 }
@@ -63,6 +65,7 @@
   width: max-content;
   gap: 1.25rem;
   will-change: transform;
+  margin: 2rem 0;
 }
 .row {
   display: flex;

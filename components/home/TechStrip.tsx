@@ -29,7 +29,7 @@ export default function TechStrip() {
           {tools.map((t) => (
             <div
               key={t}
-              className="rounded-md border border-[var(--color-border)] px-3 py-2 text-center"
+              className="rounded-md border border-border px-3 py-2 text-center"
             >
               {t}
             </div>

@@ -12,7 +12,7 @@ const nav = [
 
 export default function Header() {
   return (
-    <header className="absolute top-0 left-0 right-0 z-50 bg-[var(--navy-900)] border-b border-white/10">
+    <header className="absolute top-0 left-0 right-0 z-50 bg-navy-900 border-b border-white/10">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
         <Link
           href="/"

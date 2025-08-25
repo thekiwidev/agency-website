@@ -23,7 +23,7 @@ const steps = [
 
 export default function Process() {
   return (
-    <section className="py-14 bg-[var(--color-muted)]">
+    <section className="py-14 bg-muted">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <header className="max-w-3xl">
           <h2 className="text-2xl sm:text-3xl font-semibold">How we work</h2>
@@ -36,9 +36,9 @@ export default function Process() {
           {steps.map((s, i) => (
             <li
               key={s.t}
-              className="rounded-xl bg-white p-5 border border-[var(--color-border)]"
+              className="rounded-xl bg-white p-5 border border-border"
             >
-              <div className="text-[var(--color-brand)] text-sm font-semibold">
+              <div className="text-brand text-sm font-semibold">
                 {String(i + 1).padStart(2, "0")}
               </div>
               <div className="mt-1 font-semibold">{s.t}</div>

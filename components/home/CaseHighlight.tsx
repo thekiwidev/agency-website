@@ -6,7 +6,7 @@ export default function CaseHighlight() {
     <section className="py-14">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="grid md:grid-cols-2 gap-6">
-          <article className="rounded-xl border border-[var(--color-border)] p-6">
+          <article className="rounded-xl border border-border p-6">
             <h3 className="font-semibold">
               Fintech web platform — feature velocity rescue
             </h3>
@@ -21,12 +21,12 @@ export default function CaseHighlight() {
             </p>
             <Link
               href="#"
-              className="mt-3 inline-flex text-sm text-[var(--color-brand)] hover:underline"
+              className="mt-3 inline-flex text-sm text-brand hover:underline"
             >
               Read the full case study →
             </Link>
           </article>
-          <article className="rounded-xl border border-[var(--color-border)] p-6">
+          <article className="rounded-xl border border-border p-6">
             <h3 className="font-semibold">
               IoT device firmware — stability and OTA
             </h3>
@@ -41,7 +41,7 @@ export default function CaseHighlight() {
             </p>
             <Link
               href="#"
-              className="mt-3 inline-flex text-sm text-[var(--color-brand)] hover:underline"
+              className="mt-3 inline-flex text-sm text-brand hover:underline"
             >
               Read the full case study →
             </Link>

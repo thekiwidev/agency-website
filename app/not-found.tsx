@@ -8,7 +8,7 @@ export default function NotFound() {
         <p className="text-slate-600 mb-6">Page not found</p>
         <Link
           href="/"
-          className="inline-flex items-center px-4 py-2 bg-[var(--color-brand)] text-white rounded-md hover:bg-[var(--color-brand-dark)]"
+          className="inline-flex items-center px-4 py-2 bg-brand text-white rounded-md hover:bg-[color-mix(in_oklch,var(--color-brand),black_10%)]"
         >
           Go home
         </Link>

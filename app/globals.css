@@ -1,35 +1,58 @@
 @import "tailwindcss";
 
 :root {
-  /* Base colors */
-  --background: #ffffff;
-  --foreground: #0b0f1a;
-  /* Navy brand palette */
-  --brand-blue: #0f2d6b; /* primary navy */
-  --brand-blue-dark: #0b224f; /* darker side for contrast */
-  --navy-900: #0b1a3a; /* dark surfaces */
-  --navy-800: #112656; /* slightly lighter dark */
-  --muted: #f5f7fb;
-  --border: #e5e7eb;
-  /* Aliases used in className via var() */
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --color-brand: var(--brand-blue);
-  --color-brand-dark: var(--brand-blue-dark);
-  --color-muted: var(--muted);
-  --color-border: var(--border);
+  --color-background: #ffffff;
+  --color-foreground: #0b0f1a;
+
+  --color-brand: #0f2d6b;
+  --color-brand-dark: #0b224f;
+
+  --color-navy-900: #0b1a3a;
+  --color-navy-800: #112656;
+  --color-muted: #f5f7fb;
+  --color-border: #e5e7eb;
+
+  /* dark mode roles */
+  --color-background-dark: var(--color-navy-900);
+  --color-foreground-dark: #e8ecf8;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: var(--navy-900);
-    --foreground: #e8ecf8;
+/* ---- Design tokens (Tailwind generates bg-*, text-*, border-* from these) ---- */
+@theme {
+  /* base */
+  --color-background: #ffffff;
+  --color-foreground: #0b0f1a;
+
+  /* brand */
+  --color-brand: #0f2d6b; /* bg-brand, text-brand */
+  --color-brand-dark: #0b224f; /* for custom CSS or future tokens */
+
+  /* supportive */
+  --color-navy-900: #0b1a3a; /* dark surface ref */
+  --color-navy-800: #112656;
+  --color-muted: #f5f7fb; /* bg-muted, text-muted */
+  --color-border: #e5e7eb; /* border-border */
+
+  /* dark mode roles */
+  --color-background-dark: var(--color-navy-900);
+  --color-foreground-dark: #e8ecf8;
+}
+
+/* ---- Base resets mapped to tokens ---- */
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground antialiased;
+  }
+  .dark body {
+    @apply bg-background-dark text-foreground-dark;
   }
 }
 
+/* Typography */
 body {
-  background: var(--background);
-  color: var(--foreground);
   font-family: var(--font-sen), ui-sans-serif, system-ui, -apple-system,
     Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
 }
@@ -42,13 +65,12 @@ body {
   font-weight: 400;
   font-display: swap;
 }
-
 .font-logo {
   font-family: var(--font-mooxy), Mooxy, ui-sans-serif;
   letter-spacing: 0.02em;
 }
 
-/* Simple utility for sphere gradient backgrounds */
+/* Custom utility using tokens (oklch mix allowed) */
 .bg-brand-sphere {
   background: radial-gradient(
       60% 60% at 65% 40%,

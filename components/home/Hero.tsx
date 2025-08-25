@@ -4,7 +4,7 @@ import { PATTERN_GLYPHS_80, PatternSheet } from "../design/PatternSheet";
 
 export default function Hero() {
   return (
-    <section className="relative isolate flex flex-col bg-[var(--navy-900)] text-white overflow-hidden">
+    <section className="relative isolate flex flex-col bg-navy-900 text-white overflow-hidden">
       <PatternSheet
         image={PATTERN_GLYPHS_80}
         tile={80}
@@ -52,7 +52,7 @@ export default function Hero() {
                 {[1, 2, 3].map((i) => (
                   <span
                     key={i}
-                    className="inline-flex h-10 w-10 rounded-full ring-2 ring-[var(--navy-900)] bg-white/10 backdrop-blur-sm"
+                    className="inline-flex h-10 w-10 rounded-full ring-2 ring-navy-900 bg-white/10 backdrop-blur-sm"
                     aria-hidden
                   />
                 ))}

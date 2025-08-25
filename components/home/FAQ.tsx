@@ -31,7 +31,7 @@ export default function FAQ() {
     <section className="py-14">
       <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
         <h2 className="text-2xl sm:text-3xl font-semibold">FAQ</h2>
-        <dl className="mt-6 divide-y divide-[var(--color-border)]">
+        <dl className="mt-6 divide-y divide-border">
           {faqs.map((f) => (
             <div key={f.q} className="py-4">
               <dt className="font-medium">{f.q}</dt>

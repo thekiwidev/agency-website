@@ -23,7 +23,7 @@ const quickLinks = [
 
 export default function Footer() {
   return (
-    <footer className="mt-24 border-t border-[var(--color-border)] bg-[var(--navy-800)] text-[#e6e7eb]">
+    <footer className="mt-24 border-t border-border bg-navy-800 text-[#e6e7eb]">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16">
         <div className="text-center">
           <div className="font-logo text-[min(16vw,160px)] leading-none text-white/15">
