@@ -28,6 +28,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Sticky navigation controls positioned at top-right corner for easy access
 - Background quote icon with brand color theming for visual enhancement
 - TypeScript-safe testimonial data structure with comprehensive client information
+- Comprehensive FAQ section with accordion functionality and detailed answers
+- 15 extensively researched FAQ items covering all service areas and business processes
+- Technical but client-friendly explanations for complex development concepts
+- Dark navy theme integration with light text and subtle card styling
+- Smooth accordion animations with one-open-at-a-time behavior
+- JSON-LD structured data for search engine optimization
+- Accessibility features with proper ARIA roles and keyboard navigation
 
 ### Changed - v0.2.0
 
@@ -79,6 +86,21 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   - Six diverse testimonials covering different roles and organizations
   - Responsive layout with mobile and desktop optimizations
 
+- FAQ section completely redesigned with comprehensive content and dark theme integration:
+
+  - 15 extensively researched questions covering all service specializations
+  - Technical explanations made accessible for non-technical business stakeholders
+  - Service-specific FAQs for Web & Mobile, DevOps, Cyber Security, AI/ML, and Embedded Systems
+  - Business process FAQs covering pricing, timelines, team composition, and project management
+  - Dark navy background (bg-navy-900) with white text for consistent theme integration
+  - Rounded card design with subtle borders (border-white/10) and hover effects
+  - Smooth accordion functionality with controlled open/close animations
+  - One-item-open-at-a-time behavior for focused content consumption
+  - Removed focus rings and outlines for clean click interactions
+  - JSON-LD structured data implementation for enhanced SEO
+  - Accessibility compliance with ARIA roles, controls, and keyboard navigation
+  - CTA section with quote and call booking buttons using consistent styling
+
 - Color system migrated from CSS variables to Tailwind v4 tokens (`@theme`)
   and utilities. Replaced `bg-[var(--…)]`, `text-[var(--…)]`, `border-[var(--…)]`
   across the codebase with `bg-*`, `text-*`, `border-*`, `divide-*`, `ring-*`
@@ -117,6 +139,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - TypeScript compilation errors in testimonials component resolved
 - Property name mismatches fixed (country→location, image→photo.src, organization→org)
 - Swiper type safety improved by replacing any types with proper SwiperType definitions
+- FAQ section focus states cleaned up to remove unwanted outline rings
+- Dark theme consistency issues resolved across FAQ cards and buttons
 
 ### Technical - v0.2.0
 
@@ -144,6 +168,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   - Swiper.js controlled mode with navigation and autoplay modules
   - Country flag mapping system for international client representation
   - Type-safe component props with proper Swiper instance typing
+- FAQ section architecture with comprehensive content strategy:
+  - `/components/home/FAQSection.tsx` (accordion component with dark theme)
+  - `/components/home/faqData.ts` (15 detailed FAQ items with TypeScript definitions)
+  - Accordion state management with smooth animations
+  - JSON-LD structured data for search engine optimization
+  - Accessibility compliance with ARIA roles and keyboard navigation
+  - Content strategy covering technical services, business processes, and client concerns
 
 ### Rollback
 
