@@ -3,10 +3,9 @@ import Trust from "@/components/home/Trust";
 import Services from "@/components/home/Services";
 import Process from "@/components/home/Process";
 import CaseHighlight from "@/components/home/CaseHighlight";
-import TechStrip from "@/components/home/TechStrip";
-import Testimonials from "@/components/home/Testimonials";
 import FAQ from "@/components/home/FAQ";
 import FinalCTA from "@/components/home/FinalCTA";
+import TestimonialsFull from "@/components/home/TestimonialsFull";
 
 export default function Home() {
   return (
@@ -16,8 +15,7 @@ export default function Home() {
       <Services />
       <Process />
       <CaseHighlight />
-      <TechStrip />
-      <Testimonials />
+      <TestimonialsFull />
       <FAQ />
       <FinalCTA />
     </>

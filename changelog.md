@@ -23,6 +23,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Service badges and hover scale effects on case study cards
 - RAF-based smooth animation with hover slow-down functionality
 - CSS mask-based fade edges for seamless marquee transitions
+- Full-screen testimonials section with Swiper.js carousel integration
+- Large portrait testimonials with country flag indicators for international clients
+- Sticky navigation controls positioned at top-right corner for easy access
+- Background quote icon with brand color theming for visual enhancement
+- TypeScript-safe testimonial data structure with comprehensive client information
 
 ### Changed - v0.2.0
 
@@ -60,6 +65,20 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   - Concise content: one-line titles and two-line descriptions for consistency
   - Six case studies covering all service specializations (Web & Mobile, DevOps & SRE, Cyber Security, AI/ML, Embedded)
 
+- Testimonials section completely redesigned as full-screen carousel experience:
+
+  - Full viewport height (100dvh) design with immersive blue gradient background
+  - Swiper.js integration with autoplay, smooth transitions, and loop functionality
+  - Large portrait images (320px) in circular frames with professional styling
+  - Country flag emoji system for international client representation (US, NG, ES)
+  - Location parsing from testimonial data to display appropriate flags
+  - Bold typography for quotes using large font sizes (text-xl to text-3xl)
+  - Background quote icon (400px) with subtle brand theming for visual depth
+  - Navigation controls repositioned from top-left to top-right corner
+  - TypeScript integration with proper Swiper type definitions (no any types)
+  - Six diverse testimonials covering different roles and organizations
+  - Responsive layout with mobile and desktop optimizations
+
 - Color system migrated from CSS variables to Tailwind v4 tokens (`@theme`)
   and utilities. Replaced `bg-[var(--…)]`, `text-[var(--…)]`, `border-[var(--…)]`
   across the codebase with `bg-*`, `text-*`, `border-*`, `divide-*`, `ring-*`
@@ -95,6 +114,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Trust component file corruption issues resolved
 - Icon imports properly configured for Feather Icons and Simple Icons
+- TypeScript compilation errors in testimonials component resolved
+- Property name mismatches fixed (country→location, image→photo.src, organization→org)
+- Swiper type safety improved by replacing any types with proper SwiperType definitions
 
 ### Technical - v0.2.0
 
@@ -116,6 +138,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   - RAF animation system with state refs for performance
   - CSS module integration for fade effects and responsive design
   - Hover state management with speed interpolation
+- Testimonials section architecture with TypeScript integration:
+  - `/components/home/TestimonialsFull.tsx` (full-screen carousel component)
+  - `/components/home/testimonialsData.ts` (testimonial type definitions and data)
+  - Swiper.js controlled mode with navigation and autoplay modules
+  - Country flag mapping system for international client representation
+  - Type-safe component props with proper Swiper instance typing
 
 ### Rollback
 
