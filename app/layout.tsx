@@ -33,7 +33,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${sen.variable} ${mooxy.variable} antialiased min-h-screen flex flex-col`}
+        className={`${sen.variable} ${mooxy.variable} antialiased min-h-screen flex flex-col bg-navy-900 text-white`}
       >
         <Header />
         <main className="flex-1">{children}</main>

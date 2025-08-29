@@ -18,6 +18,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Keyboard navigation support (Arrow Up/Down, Enter/Space) for process steps
 - Accessibility features including ARIA roles, tablist/tab/tabpanel structure
 - swiper dependency for cards effect and vertical slider functionality
+- Case study marquee with continuous horizontal scrolling animation
+- Background image cards with floating text content overlays
+- Service badges and hover scale effects on case study cards
+- RAF-based smooth animation with hover slow-down functionality
+- CSS mask-based fade edges for seamless marquee transitions
 
 ### Changed - v0.2.0
 
@@ -41,6 +46,19 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   - Process steps now use Phosphor icons (PiChatCircle, PiMagnifyingGlass, PiWallet, PiWrench, PiPackage)
   - Placeholder images sourced from Unsplash with descriptive alt text for each process step
   - Images on mobile have reduced opacity (opacity-20) for subtle background effect when used as overlay
+
+- Case study section redesigned from static grid to continuous marquee layout:
+
+  - Full background image cards with floating text content overlays
+  - Tall card format (500px height) for better visual impact
+  - Service badges positioned at top of each card
+  - Hover effects: card scale-up and background image zoom
+  - Reduced motion support with automatic animation disable
+  - CSS mask-based horizontal fade edges using existing marquee module
+  - RAF animation loop with precise offset calculation and gap handling
+  - Responsive card sizing (78vw mobile, 460px desktop)
+  - Concise content: one-line titles and two-line descriptions for consistency
+  - Six case studies covering all service specializations (Web & Mobile, DevOps & SRE, Cyber Security, AI/ML, Embedded)
 
 - Color system migrated from CSS variables to Tailwind v4 tokens (`@theme`)
   and utilities. Replaced `bg-[var(--…)]`, `text-[var(--…)]`, `border-[var(--…)]`
@@ -92,6 +110,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Swiper.js integration with controlled mode and cards effect
 - Custom hook pattern for complex state management with intersection observer
 - Type-safe process step definitions with ReactNode icons and image metadata
+- Case study marquee architecture following reusable component patterns:
+  - `/components/home/CaseHighlightMarquee.tsx` (main marquee component)
+  - `/components/home/caseData.ts` (typed case study configuration)
+  - RAF animation system with state refs for performance
+  - CSS module integration for fade effects and responsive design
+  - Hover state management with speed interpolation
 
 ### Rollback
 

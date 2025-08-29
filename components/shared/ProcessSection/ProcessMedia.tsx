@@ -97,14 +97,13 @@ export function ProcessMedia({
                 />
 
                 {/* Step indicator with icon and title - hide on mobile overlay */}
-                {!isMobileOverlay && (
-                  <div className="absolute top-4 left-4 bg-black/60 backdrop-blur-sm rounded-full px-4 py-2 flex items-center gap-2">
-                    <div className="text-white/90">{step.icon}</div>
-                    <span className="text-white text-sm font-medium">
-                      {step.title}
-                    </span>
-                  </div>
-                )}
+
+                <div className="absolute top-4 left-4 bg-black/60 backdrop-blur-sm rounded-full px-4 py-2 flex items-center gap-2">
+                  <div className="text-white/90">{step.icon}</div>
+                  <span className="text-white text-sm font-medium">
+                    {step.title}
+                  </span>
+                </div>
               </div>
             </SwiperSlide>
           ))}
