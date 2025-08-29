@@ -13,6 +13,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Extended security and compliance badge collection with 10 service guarantees
 - Horizontal fade effect for seamless marquee transitions
 - react-icons dependency for consistent iconography
+- Process section with interactive vertical stacked slider using Swiper.js
+- Advanced state machine for autoplay, pause/resume, and intersection observer functionality
+- Keyboard navigation support (Arrow Up/Down, Enter/Space) for process steps
+- Accessibility features including ARIA roles, tablist/tab/tabpanel structure
+- swiper dependency for cards effect and vertical slider functionality
 
 ### Changed - v0.2.0
 
@@ -22,6 +27,20 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Signal pills centered and expanded with comprehensive security features
 - Marquee container background made transparent for cleaner appearance
 - All colors updated to match Hero section's white-on-navy design system
+- Process section completely redesigned from static grid to interactive two-column layout:
+
+  - Left column: clickable process steps with selection states and hover effects
+  - Right column: vertical stacked image slider with smooth card transitions
+  - Dynamic step overlay showing current process icon and title instead of numbers
+  - Simplified click behavior: clicking any step sets active index and continues autoplay (no pause/resume)
+  - Responsive layout with optimized column proportions (2/5 processes, 3/5 media)
+  - Mobile layout: stacked design with process list followed by full-width images below
+  - Mobile images have reduced height (400px) and disabled pointer events for visual reference only
+  - Unified blue-themed styling across desktop and mobile for better contrast and readability
+  - Process cards use blue backgrounds (bg-blue-900/80 active, bg-blue-900/40 inactive) with blue accents
+  - Process steps now use Phosphor icons (PiChatCircle, PiMagnifyingGlass, PiWallet, PiWrench, PiPackage)
+  - Placeholder images sourced from Unsplash with descriptive alt text for each process step
+  - Images on mobile have reduced opacity (opacity-20) for subtle background effect when used as overlay
 
 - Color system migrated from CSS variables to Tailwind v4 tokens (`@theme`)
   and utilities. Replaced `bg-[var(--…)]`, `text-[var(--…)]`, `border-[var(--…)]`
@@ -65,6 +84,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   `@theme` and are consumable as `bg-foreground`, `bg-brand`, etc.
 - Complex gradients remain custom CSS using `color-mix` with token vars.
 - Build verified with Turbopack.
+- Process section architecture following component separation guidelines:
+  - `/components/shared/ProcessSection/` with modular structure
+  - `ProcessSection.tsx` (main component), `ProcessList.tsx` (left column)
+  - `ProcessMedia.tsx` (right slider), `useProcessCarousel.ts` (state management)
+  - `processData.ts` (centralized process step configuration)
+- Swiper.js integration with controlled mode and cards effect
+- Custom hook pattern for complex state management with intersection observer
+- Type-safe process step definitions with ReactNode icons and image metadata
 
 ### Rollback
 

@@ -31,7 +31,7 @@
 
 ## Sidebar (visible across tabs)
 
-**Contact info**
+### **Contact info**
 
 - **Email**: hello@[agency].com · **Sales**: sales@[agency].com · **Support**: support@[agency].com
 - **Phone/WA**: [+1 (XXX) XXX‑XXXX] (US reception hours)
@@ -49,14 +49,14 @@
 
 Short intro: Schedule a 30‑ or 45‑minute discovery with a lead engineer. Bring goals, constraints, and timelines.
 
-**Scheduler embed**
+### Scheduler embed
 
 - Provider: **Cal.com** preferred; fallback **Calendly**.
 - Slots: 30 and 45 minutes. Buffer 15 minutes.
 - Pre‑questions (routing): name, email, company, role, service of interest, urgency.
 - Confirmation: calendar invite + email with prep checklist.
 
-**Placeholder embed (replace URLs)**
+### Placeholder embed (replace URLs)
 
 ```html
 <!-- Cal.com embed -->
@@ -70,12 +70,12 @@ Short intro: Schedule a 30‑ or 45‑minute discovery with a lead engineer. Bri
   Calcom.embed({
     element: document.getElementById("cal-embed"),
     calLink: "https://cal.com/[agency]/discovery",
-    layout: "month_view"
+    layout: "month_view",
   });
 </script>
 ```
 
-**Prep checklist**
+### Prep checklist
 
 - Repo/brief links (if allowed), target outcomes, deadline, success metrics, stakeholders.
 
@@ -87,7 +87,7 @@ Short intro: Schedule a 30‑ or 45‑minute discovery with a lead engineer. Bri
 
 Short intro: We scope outcomes, estimate hours by role, and send a quote within **48 hours** after discovery. Hourly T&M in the **\$15–\$25/hr** range.
 
-**Step 1 — Basics**
+### Step 1 — Basics
 
 - Full name
 - Work email
@@ -96,31 +96,31 @@ Short intro: We scope outcomes, estimate hours by role, and send a quote within 
 - Phone/WhatsApp (optional)
 - Time zone
 
-**Step 2 — Project**
+### Step 2 — Project
 
-- Service of interest *(multi‑select)*: Web & Mobile · Cyber Security · DevOps · Embedded · AI/ML
+- Service of interest _(multi‑select)_: Web & Mobile · Cyber Security · DevOps · Embedded · AI/ML
 - Work type: Full project · Feature/Fix · Audit/Assessment · Ongoing support
-- Goals and success criteria *(textarea)*
+- Goals and success criteria _(textarea)_
 - Timeline: start window + target date
 - Budget range: <\$1k · \$1k–\$5k · \$5k–\$10k · \$10k–\$25k · \$25k+
-- Links: repo/brief/docs *(URLs)*
+- Links: repo/brief/docs _(URLs)_
 - Attachments: PDF/DOCX/ZIP up to 25MB
-- NDA needed? *(toggle)*
+- NDA needed? _(toggle)_
 
-**Step 3 — Extras**
+### Step 3 — Extras
 
 - Compliance context: none · healthcare · finance · other
 - Preferred meeting length: 30 or 45 min
-- Anything else we should know? *(textarea)*
+- Anything else we should know? _(textarea)_
 
 **Review & submit** → Auto‑email to requester and Slack/CRM alert to internal team.
 
-**Post‑submit**
+### Post‑submit
 
 - Thank‑you page with **Book a Call** inline if not already scheduled.
 - Email confirmation with ticket/lead ID and next steps.
 
-**Form notes**
+### Form notes
 
 - Validation server‑side + hCaptcha.
 - File virus scan.
@@ -133,12 +133,12 @@ Short intro: We scope outcomes, estimate hours by role, and send a quote within 
 
 Short intro: Use this for support, partnership, or general questions. For scoped work, use **Request a Quote**.
 
-**Subject** *(select)*: Support · Sales · Partnership · Press · Billing · Other\
-**Message** *(textarea)*\
+**Subject** _(select)_: Support · Sales · Partnership · Press · Billing · Other\
+**Message** _(textarea)_\
 **Optional**: service of interest, links, attachments (PDF/DOCX up to 10MB)\
 **Contact details**: name, email, company
 
-**Auto‑routing**
+### Auto‑routing
 
 - Support → support@[agency].com
 - Sales → sales@[agency].com
@@ -181,7 +181,7 @@ Body: Summary with fields and links to CRM + Slack thread.
 ## CRM & Routing (spec)
 
 - Create/Update lead with properties: source, subject, service(s), budget, timeline, region, nda, links, attachments.
-- Stage transitions: *New* → *Discovery* (on call booked) → *Quoted* → *Won/Lost*.
+- Stage transitions: _New_ → _Discovery_ (on call booked) → _Quoted_ → _Won/Lost_.
 - UTM storage and `gclid`/`fbclid` where present.
 - Slack alert channel: `#leads` with summary and action buttons.
 
@@ -230,7 +230,7 @@ Microcopy: First reply in **< 2 hours**. Quote in **< 48 hours** after discovery
     "sales": "sales@[agency].com",
     "default": "hello@[agency].com"
   },
-  "upload": {"maxMb": 25, "types": ["pdf", "docx", "zip"]}
+  "upload": { "maxMb": 25, "types": ["pdf", "docx", "zip"] }
 }
 ```
 
@@ -242,4 +242,3 @@ Microcopy: First reply in **< 2 hours**. Quote in **< 48 hours** after discovery
 - “All work is billed hourly within **\$15–\$25/hr** unless a fixed‑bid SOW is signed.”
 - “Do not upload production secrets or credentials.”
 - “We comply with reasonable customer security addenda.”
-

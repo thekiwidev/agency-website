@@ -1,7 +1,19 @@
 # Product Requirements Document (PRD)
 
 **Product**: Software Development Agency Marketing Website  
-**Version**: 1.0 (MVP -> V1.1 -> V2)  
+\*\*Versio### 6.3 ### 6.3 Service Detail Pages (one per specialization)
+
+Common sections:
+
+- Problem/Outcome framing; who it's for.
+- Capabilities list with sub‑services.
+- Delivery model: hourly billing, typical roles, team composition.
+- Process and SLAs.
+- Sample deliverables and timelines.(MVP -> V1.1 -> V2)
+- Toolchain & compliance notes.
+- Case study carousel filtered to this service.
+- FAQ + CTA.il Pages (one per specialization)
+
 **Owner**: Agency Ops / Growth  
 **Primary Goals**: Generate qualified leads, streamline quoting, build trust with B2B buyers, recruit contractors.
 
@@ -11,7 +23,7 @@
 
 A modern, high‑conversion marketing site for a contractor‑driven software agency specializing in: Web & Mobile Engineering, Cyber Security, DevOps, Embedded Systems, and AI/ML. Visitors submit inquiries, book calls, and receive quotes billed primarily per hour. MVP prioritizes lead capture + manual quoting. Later phases add self‑serve scoping, rate cards, and a client portal.
 
-**Key Outcomes**
+### Key Outcomes
 
 - Increase qualified lead volume and quote acceptance rate.
 - Shorten time‑to‑first‑response and time‑to‑quote.
@@ -21,7 +33,7 @@ A modern, high‑conversion marketing site for a contractor‑driven software ag
 
 ## 2) Target Users & JTBD
 
-**Buyer ICPs**
+### Buyer ICPs
 
 - Startup founders and CTOs: feature delivery, rescues, speed.
 - SMB/Enterprise engineering leaders: overflow capacity, specialist workstreams.
@@ -29,7 +41,7 @@ A modern, high‑conversion marketing site for a contractor‑driven software ag
 - Hardware/IoT teams: firmware and embedded expertise.
 - Data/AI leads: ML/LLM integration, MLOps.
 
-**Jobs‑to‑Be‑Done**
+### Jobs‑to‑Be‑Done
 
 - _Scope & select_: Assess capability, fit, and cost quickly.
 - _Engage_: Request a quote and schedule a discovery call.
@@ -51,7 +63,7 @@ A modern, high‑conversion marketing site for a contractor‑driven software ag
 
 ## 4) Scope
 
-**In‑Scope (MVP)**
+### In‑Scope (MVP)
 
 - Marketing website with clear IA and high‑converting CTAs.
 - Inquiry/quote request form with file upload and budget/timeline fields.
@@ -60,12 +72,12 @@ A modern, high‑conversion marketing site for a contractor‑driven software ag
 - Case studies, About, Pricing & Engagement, Blog/Insights, Contractors Join page.
 - Basic CRM integration, email notifications, analytics, and consent.
 
-**Out‑of‑Scope (MVP)**
+### Out‑of‑Scope (MVP)
 
 - Client portal, project tracking, real‑time quote calculators.
 - Payments, e‑sign, SOW generation inside the site.
 
-**Later (Roadmap)**
+### Later (Roadmap)
 
 - Guided estimator, rate cards, instant NDA, e‑sign, deposits.
 - Client portal (milestones, invoices, docs).
@@ -80,7 +92,7 @@ A modern, high‑conversion marketing site for a contractor‑driven software ag
 **Contractors**: Join the Network · Open Roles  
 **Footer**: Privacy · Terms · Security · DPA · Cookie Policy · Careers · Newsletter · Social
 
-**Search & Sitemaps**
+### Search & Sitemaps
 
 - On‑site search (MVP optional).
 - XML sitemap, robots.txt, breadcrumb schema, clean URL slugs.
@@ -108,7 +120,7 @@ A modern, high‑conversion marketing site for a contractor‑driven software ag
 
 ### 6.3 Service Detail Pages (one per specialization)
 
-**Common sections**
+#### **Common sections**
 
 - Problem/Outcome framing; who it’s for.
 - Capabilities list with sub‑services.
@@ -171,7 +183,7 @@ A modern, high‑conversion marketing site for a contractor‑driven software ag
 
 ## 7) User Flows (MVP)
 
-**Lead Intake → Quote**
+### Lead Intake → Quote
 
 1. Visitor lands via SEO/ads/referral → Home/Service page.
 2. CTA → Request a Quote (form).
@@ -183,7 +195,7 @@ A modern, high‑conversion marketing site for a contractor‑driven software ag
 8. On acceptance: status = _Won_. Assign lead engineer; kickoff email.
 9. If no response: automated follow‑ups at 2, 7, 14 days.
 
-**Contractor Application**
+### Contractor Application
 
 1. Candidate submits application.
 2. ATS status -> Screening → Tech Review → Offer/Pool.
@@ -261,18 +273,18 @@ A modern, high‑conversion marketing site for a contractor‑driven software ag
 
 ## 13) Integration Contracts (MVP)
 
-**Form → CRM**
+### Form → CRM
 
 - Payload: { name, email, company, role, service, budgetRange, timeline, message, attachments[], utm\*, consent }.
 - Create/Update lead. Tag by service.
 - Webhook retries with exponential backoff.
 
-**Form → Email**
+### Form → Email
 
 - To visitor: confirmation with next steps and scheduler link.
 - To internal: new lead summary with quick‑view.
 
-**Scheduler → CRM**
+### Scheduler → CRM
 
 - On booking: update lead stage to _Discovery_; attach meeting link and time.
 

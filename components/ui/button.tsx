@@ -22,9 +22,9 @@ const sizes = {
 };
 const variants = {
   primary:
-    "bg-brand text-white hover:bg-[color-mix(in_oklch,var(--color-brand),black_10%)] focus-visible:ring-brand",
+    "bg-white !text-black hover:bg-white/80 hover:!text-black focus-visible:ring-brand font-semibold",
   secondary:
-    "bg-foreground text-background hover:opacity-90 focus-visible:ring-foreground",
+    "font-semibold border border-white/30 bg-white/10 hover:bg-white/15 text-white",
   ghost:
     "bg-transparent text-foreground border border-border hover:bg-muted focus-visible:ring-brand",
 };

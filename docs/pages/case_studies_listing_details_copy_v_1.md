@@ -19,7 +19,7 @@
 **Filters**: Industry ▾ · Service ▾ · Stack ▾ · Outcome ▾\
 **Sort**: Newest · Impact (largest delta) · Alphabetical
 
-**Tile fields**
+### **Tile fields**
 
 - Title
 - One‑liner (engagement type)
@@ -283,7 +283,7 @@ Follow‑on work or handover. Link to related case studies and relevant services
   "@context": "https://schema.org",
   "@type": "CaseStudy",
   "name": "Fintech web platform — feature velocity rescue",
-  "author": {"@type": "Organization", "name": "[Agency]"},
+  "author": { "@type": "Organization", "name": "[Agency]" },
   "about": ["Web Development", "DevOps"],
   "industry": "Financial services",
   "datePublished": "[YYYY-MM-DD]",
@@ -307,4 +307,3 @@ Follow‑on work or handover. Link to related case studies and relevant services
 - Blur non‑public identifiers.
 - Use vector diagrams where code cannot be shared.
 - Provide descriptive alt text for each image.
-

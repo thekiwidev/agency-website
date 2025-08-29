@@ -60,26 +60,26 @@ Output:
 
 ### Inputs
 
-- **Work type** *(select)*: Full Project · Feature/Fix · Cyber Security · DevOps · Embedded · AI/ML
-- **Complexity** *(radio)*: Low · Medium · High
-- **Weeks** *(slider)*: 1–26
-- **Hours/week per engineer** *(slider)*: 5–40
-- **Team size** *(stepper)*: 1–6
-- **Options** *(toggles)*: Expedited timeline · Regulated compliance (e.g., healthcare/finance) · Onsite requirement
+- **Work type** _(select)_: Full Project · Feature/Fix · Cyber Security · DevOps · Embedded · AI/ML
+- **Complexity** _(radio)_: Low · Medium · High
+- **Weeks** _(slider)_: 1–26
+- **Hours/week per engineer** _(slider)_: 5–40
+- **Team size** _(stepper)_: 1–6
+- **Options** _(toggles)_: Expedited timeline · Regulated compliance (e.g., healthcare/finance) · Onsite requirement
 
 ### Calculation
 
 - **Base rate**: \$15/hr.
 - **Multipliers**:
-  - *Work type*:
+  - _Work type_:
     - Full Project: ×1.30–1.60
     - Feature/Fix: ×1.00–1.20
     - Cyber Security: ×1.20–1.60
     - DevOps: ×1.20–1.40
     - Embedded: ×1.40–1.60
     - AI/ML: ×1.30–1.60
-  - *Complexity*: Low ×0.95 · Medium ×1.05 · High ×1.15
-  - *Options*: Expedited +0.10, Compliance +0.05, Onsite +0.05 (applied multiplicatively)
+  - _Complexity_: Low ×0.95 · Medium ×1.05 · High ×1.15
+  - _Options_: Expedited +0.10, Compliance +0.05, Onsite +0.05 (applied multiplicatively)
 
 **Effective hourly** = clamp( round( Base × WorkType × Complexity × (1 + option surcharges) ), **\$15**, **\$25** )\
 **Total estimate** = Effective hourly × (Team size × Hours/week × Weeks)
@@ -174,9 +174,9 @@ We produce a milestone plan with role mix, acceptance criteria, and best/worst�
     "Embedded": [1.4, 1.6],
     "AI/ML": [1.3, 1.6]
   },
-  "complexity": {"Low": 0.95, "Medium": 1.05, "High": 1.15},
-  "options": {"Expedited": 0.10, "Compliance": 0.05, "Onsite": 0.05},
-  "sliders": {"weeks": [1, 26], "hoursPerWeek": [5, 40], "teamSize": [1, 6]}
+  "complexity": { "Low": 0.95, "Medium": 1.05, "High": 1.15 },
+  "options": { "Expedited": 0.1, "Compliance": 0.05, "Onsite": 0.05 },
+  "sliders": { "weeks": [1, 26], "hoursPerWeek": [5, 40], "teamSize": [1, 6] }
 }
 ```
 
@@ -187,4 +187,3 @@ We produce a milestone plan with role mix, acceptance criteria, and best/worst�
 - “Estimated totals are informational and subject to a formal quote after discovery.”
 - “All work is billed hourly within the \$15–\$25/hr range unless a fixed‑bid SOW is signed.”
 - “We can sign your NDA or provide ours.”
-

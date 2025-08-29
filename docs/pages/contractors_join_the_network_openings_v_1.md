@@ -18,7 +18,7 @@
 
 **Signal chips**: Remote first · US‑registered · Global talent footprint · Weekly payouts · NDA on request
 
-**Benefits**
+### Benefits
 
 - Product work, not ticket mills.
 - Transparent rates and scope.
@@ -27,7 +27,7 @@
 - Mentorship and code reviews; strong engineering bar.
 - Flexible hours with required overlap.
 
-**How it works**
+### How it works
 
 1. Apply with your work and availability.
 2. Screening call (15–30 min).
@@ -131,7 +131,7 @@ Use this structure at `/careers/[slug]` with role‑specific content below.
 **Basics**: Contractor · Remote · Overlap 4 hours (US/EU) · Start: immediate/next 2–4 weeks\
 **Rate guide**: \$18–\$25/hr
 
-**Responsibilities**
+### Frontend Web Engineer Responsibilities
 
 - Implement features in React/Next.js with TypeScript.
 - Design modular components and maintain Storybook entries.
@@ -140,14 +140,14 @@ Use this structure at `/careers/[slug]` with role‑specific content below.
 - Write tests: unit, E2E, visual regression.
 - Participate in code reviews and technical planning.
 
-**Minimum qualifications**
+### Frontend Web Engineer Minimum qualifications
 
 - 4+ years React/TypeScript.
 - Next.js app router experience.
 - GitHub Actions or similar CI/CD.
 - Proven shipped projects or portfolio.
 
-**Nice to have**
+### Frontend Web Engineer Nice to have
 
 - Node.js backend experience.
 - Design systems and CSS architecture.
@@ -166,7 +166,7 @@ Use this structure at `/careers/[slug]` with role‑specific content below.
 **Basics**: Contractor · Remote · Overlap 3+ hours (US/EU) · Start: 2–4 weeks\
 **Rate guide**: \$18–\$25/hr
 
-**Responsibilities**
+### Mobile App Engineer Responsibilities
 
 - Build features with RN or Swift/Kotlin as appropriate.
 - Implement offline‑first sync and background tasks.
@@ -174,14 +174,14 @@ Use this structure at `/careers/[slug]` with role‑specific content below.
 - Write unit/E2E tests and manage release pipelines.
 - Debug crashes and performance issues.
 
-**Minimum qualifications**
+### Mobile App Engineer Minimum qualifications
 
 - 3+ years mobile dev.
 - React Native or Swift/Kotlin in production.
 - Familiarity with CI for mobile (Fastlane, GitHub Actions).
 - Store release experience.
 
-**Nice to have**
+### Mobile App Engineer Nice to have
 
 - Native modules, GraphQL, feature flagging.
 - Crashlytics/Sentry, performance tooling.
@@ -197,7 +197,7 @@ Use this structure at `/careers/[slug]` with role‑specific content below.
 **Basics**: Contractor · Remote · Overlap 4 hours (US/EU) · Start: 2–6 weeks\
 **Rate guide**: \$20–\$25/hr
 
-**Responsibilities**
+### DevOps / SRE Engineer Responsibilities
 
 - Build CI/CD pipelines with safe rollouts (blue‑green/canary).
 - Define Terraform modules and multi‑env topologies.
@@ -205,14 +205,14 @@ Use this structure at `/careers/[slug]` with role‑specific content below.
 - Instrument services and define SLOs/dashboards/alerts.
 - Create runbooks and on‑call playbooks.
 
-**Minimum qualifications**
+### DevOps / SRE Engineer Minimum qualifications
 
 - 4+ years in DevOps/SRE.
 - Terraform and at least one major cloud (AWS/GCP/Azure).
 - Kubernetes and container networking basics.
 - Incident response experience.
 
-**Nice to have**
+### DevOps / SRE Engineer Nice to have
 
 - ArgoCD, OpenTelemetry, cost optimization work.
 - Secrets management (Vault/KMS).
@@ -231,7 +231,7 @@ Route: `/careers/apply` (standalone) and `/careers/[slug]/apply` (pre‑populate
 
 ### Form fields
 
-- **Role** *(read‑only if deep‑linked)*: [Frontend Web Engineer]
+- **Role** _(read‑only if deep‑linked)_: [Frontend Web Engineer]
 - **Full name**
 - **Email**
 - **Phone/WhatsApp (optional)**
@@ -239,22 +239,22 @@ Route: `/careers/apply` (standalone) and `/careers/[slug]/apply` (pre‑populate
 - **LinkedIn**
 - **GitHub/GitLab**
 - **Portfolio or case studies**
-- **Resume/CV** *(PDF/DOCX)*
-- **Years of experience** *(numeric)*
-- **Primary stack** *(multi‑select)*: React, Next.js, Node, GraphQL, Swift, Kotlin, RN, Python, Go, Terraform, Kubernetes, AWS, GCP, Azure, C/C++, RTOS, PyTorch, etc.
-- **Availability** *(select)*: immediate, <2 weeks, 2–4 weeks, >1 month
-- **Hours/week preference** *(slider)*
-- **Rate expectation** *(optional; hourly)*
-- **Work samples** *(up to 3 links)*
+- **Resume/CV** _(PDF/DOCX)_
+- **Years of experience** _(numeric)_
+- **Primary stack** _(multi‑select)_: React, Next.js, Node, GraphQL, Swift, Kotlin, RN, Python, Go, Terraform, Kubernetes, AWS, GCP, Azure, C/C++, RTOS, PyTorch, etc.
+- **Availability** _(select)_: immediate, <2 weeks, 2–4 weeks, >1 month
+- **Hours/week preference** _(slider)_
+- **Rate expectation** _(optional; hourly)_
+- **Work samples** _(up to 3 links)_
 - **Short answers**:
-  - *Which system or feature are you most proud of? Why?*
-  - *Describe a difficult production issue you owned and solved.*
-  - *Any constraints we should know?*
+  - _Which system or feature are you most proud of? Why?_
+  - _Describe a difficult production issue you owned and solved._
+  - _Any constraints we should know?_
 - **Compliance**: NDA consent checkbox; confirm you can work under client security policies.
 - **Data consent**: acknowledge privacy policy.
-- **Referred by** *(optional)*
+- **Referred by** _(optional)_
 
-**Form behaviors**
+### Form behaviors
 
 - Pre‑populate **Role** when coming from a role detail page.
 - Save‑in‑progress (local storage) and resumable uploads.
@@ -312,13 +312,18 @@ Route: `/careers/apply` (standalone) and `/careers/[slug]/apply` (pre‑populate
   "title": "Frontend Web Engineer (React/Next.js)",
   "description": "Build modern web apps with React/Next.js. Ship features with tests, performance budgets, and accessibility.",
   "employmentType": "CONTRACTOR",
-  "applicantLocationRequirements": {"@type": "Country", "name": "Remote"},
-  "hiringOrganization": {"@type": "Organization", "name": "[Agency]"},
+  "applicantLocationRequirements": { "@type": "Country", "name": "Remote" },
+  "hiringOrganization": { "@type": "Organization", "name": "[Agency]" },
   "jobLocationType": "TELECOMMUTE",
   "baseSalary": {
     "@type": "MonetaryAmount",
     "currency": "USD",
-    "value": {"@type": "QuantitativeValue", "minValue": 18, "maxValue": 25, "unitText": "HOUR"}
+    "value": {
+      "@type": "QuantitativeValue",
+      "minValue": 18,
+      "maxValue": 25,
+      "unitText": "HOUR"
+    }
   },
   "applicantLocationRequirementsDescription": "4h daily overlap with US/EU time zones",
   "datePosted": "[YYYY-MM-DD]",
@@ -334,4 +339,3 @@ Route: `/careers/apply` (standalone) and `/careers/[slug]/apply` (pre‑populate
 - “All engagements are hourly unless otherwise agreed in writing.”
 - “We cannot accept work that violates another employer’s policies.”
 - “Provide only non‑confidential work samples.”
-

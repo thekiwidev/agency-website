@@ -32,12 +32,7 @@ export default function Header() {
           ))}
         </nav>
         <div className="flex items-center">
-          <Button
-            asChild
-            href="/contact#quote"
-            size="sm"
-            className="bg-white !text-black hover:bg-white/90 hover:!text-black"
-          >
+          <Button asChild href="/contact#quote" size="sm">
             <span>Get a Quote</span>
           </Button>
         </div>

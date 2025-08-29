@@ -64,18 +64,14 @@ export default function Hero() {
               </p>
 
               <div className="mt-7 flex flex-wrap gap-3">
-                <Button
-                  asChild
-                  size="lg"
-                  className="px-6 py-4 font-semibold bg-white !text-black hover:bg-white/90 hover:!text-black"
-                >
+                <Button asChild size="lg" className="px-6 py-4">
                   <a href="/contact#quote">Get a Quote</a>
                 </Button>
                 <Button
                   asChild
                   size="lg"
                   variant="secondary"
-                  className="px-6 py-4 font-semibold border border-white/30 bg-white/10 hover:bg-white/15 text-white"
+                  className="px-6 py-4"
                 >
                   <a href="/contact#call">Book a Call</a>
                 </Button>
