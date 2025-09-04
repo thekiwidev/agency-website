@@ -7,7 +7,7 @@ const quickLinks = [
     { href: "/case-studies", label: "Case Studies" },
   ],
   [
-    { href: "/about", label: "About" },
+    { href: "/about-us", label: "About" },
     { href: "/contractors", label: "Contractors" },
     { href: "/insights", label: "Insights" },
   ],
