@@ -83,3 +83,154 @@ body {
       transparent 75%
     );
 }
+
+/* Legal content visual hierarchy */
+.legal-content {
+  /* Enhanced heading hierarchy */
+  h1 {
+    @apply text-4xl font-bold text-white mb-8 mt-12 first:mt-0;
+  }
+  
+  h2 {
+    @apply text-3xl font-semibold text-white mb-6 mt-10;
+  }
+  
+  h3 {
+    @apply text-2xl font-semibold text-white mb-4 mt-8;
+  }
+  
+  h4 {
+    @apply text-xl font-medium text-white mb-3 mt-6;
+  }
+  
+  h5 {
+    @apply text-lg font-medium text-white/90 mb-3 mt-5;
+  }
+  
+  h6 {
+    @apply text-base font-medium text-white/80 mb-2 mt-4;
+  }
+  
+  /* Body text with hierarchy */
+  p {
+    @apply text-white/85 leading-relaxed mb-4;
+  }
+  
+  /* Dimmed text for less important content */
+  .text-secondary {
+    @apply text-white/60;
+  }
+  
+  /* Bright, readable links */
+  a {
+    @apply text-blue-300 hover:text-blue-200 underline decoration-blue-300/50 hover:decoration-blue-200 transition-colors;
+  }
+  
+  /* Email links with special styling */
+  a[href^="mailto:"] {
+    @apply text-cyan-300 hover:text-cyan-200 decoration-cyan-300/50 hover:decoration-cyan-200;
+  }
+  
+  /* Enhanced list hierarchy with better indentation */
+  ul, ol {
+    @apply text-white/85 mb-4;
+  }
+  
+  li {
+    @apply mb-2;
+  }
+  
+  /* Nested list indentation */
+  ul ul, ol ol, ul ol, ol ul {
+    @apply ml-6 mt-2 mb-2;
+  }
+  
+  ul ul ul, ol ol ol, ul ol ol, ol ul ul {
+    @apply ml-8;
+  }
+  
+  /* List markers */
+  ul > li {
+    @apply relative pl-6;
+  }
+  
+  ul > li::before {
+    content: "•";
+    @apply absolute left-0 text-blue-300 font-bold;
+  }
+  
+  /* Nested list markers */
+  ul ul > li::before {
+    content: "◦";
+    @apply text-blue-200;
+  }
+  
+  ul ul ul > li::before {
+    content: "▪";
+    @apply text-blue-100;
+  }
+  
+  /* Ordered list styling */
+  ol {
+    counter-reset: list-counter;
+  }
+  
+  ol > li {
+    counter-increment: list-counter;
+    @apply relative pl-8;
+  }
+  
+  ol > li::before {
+    content: counter(list-counter) ".";
+    @apply absolute left-0 text-blue-300 font-semibold;
+  }
+  
+  /* Strong and emphasis */
+  strong {
+    @apply text-white font-semibold;
+  }
+  
+  em {
+    @apply text-white/90 italic;
+  }
+  
+  /* Code styling */
+  code {
+    @apply bg-white/10 text-cyan-200 px-2 py-1 rounded text-sm;
+  }
+  
+  pre {
+    @apply bg-white/5 border border-white/10 rounded-lg p-4 overflow-x-auto mb-4;
+  }
+  
+  pre code {
+    @apply bg-transparent p-0;
+  }
+  
+  /* Blockquotes */
+  blockquote {
+    @apply border-l-4 border-blue-300 pl-6 py-2 my-6 bg-white/5 rounded-r-lg;
+  }
+  
+  blockquote p {
+    @apply text-white/80 italic mb-0;
+  }
+  
+  /* Tables */
+  table {
+    @apply w-full border-collapse border border-white/20 rounded-lg overflow-hidden mb-6;
+  }
+  
+  th {
+    @apply bg-white/10 text-white font-semibold p-3 border border-white/20;
+  }
+  
+  td {
+    @apply text-white/85 p-3 border border-white/10;
+  }
+  
+  /* Horizontal rules */
+  hr {
+    @apply border-white/20 my-8;
+  }
+}

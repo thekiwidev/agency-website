@@ -39,6 +39,17 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Conversion-focused messaging addressing speed and capacity pain points
 - Trust signals including response times and quality commitments
 - Prominent button styling with high-contrast primary CTA design
+- Complete legal page implementations:
+  - Privacy Policy page with comprehensive data collection, retention, and rights information
+  - Terms of Service page with detailed engagement terms, IP rights, and liability clauses
+  - Cookie Policy page with cookie usage, management, and retention details
+  - Data Processing Addendum page for GDPR compliance and data protection
+  - Security Policy page outlining hosting, access controls, encryption, and incident response
+- LegalButton component for consistent button styling across legal pages
+- LegalPageLayout component with sidebar navigation and call-to-action sections
+- Agency Styling & Brand Guidelines v1 documentation as single source of truth for design system
+- Enhanced legal content CSS classes for improved typography and visual hierarchy
+- Framer Motion dependency for enhanced animations and motion effects
 
 ### Changed - v0.2.0
 
@@ -148,6 +159,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   - Updated copy and highlight pills (`bg-white/10`, `border-white/20`).
   - CTA button uses white inversion for contrast.
   - Images referenced from `/images/*.png` with tuned `sizes` for perf.
+- Case study section redesigned to be edge-to-edge of the viewport by removing container constraints and making the marquee full-width
+- Footer link paths updated to use full hyphenated names: `/privacy-policy`, `/terms-of-service`, `/security-policy`, `/data-processing-agreement`, `/cookies-agreement`
+- Legal page layout updated with correct link paths in navigation sidebar
+- Enhanced legal content styling with comprehensive CSS rules for headings, lists, links, code blocks, tables, and blockquotes
+- Copilot instructions updated with new sections and guidelines for styling, components, and development workflow
+- Bun lockfile updated to include new dependencies
 
 ### Fixed - v0.2.0
 
@@ -198,6 +215,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   - Trust signal integration with specific response time commitments
   - Visual hierarchy optimization with high-contrast button styling
   - Mobile-responsive design with proper touch target sizing
+- Legal pages architecture with comprehensive content and navigation:
+  - `/app/privacy-policy/page.tsx`, `/app/terms-of-service/page.tsx`, `/app/security-policy/page.tsx`, `/app/data-processing-agreement/page.tsx`, `/app/cookies-agreement/page.tsx` (complete legal document pages)
+  - `/components/legal/LegalPageLayout.tsx` (shared layout with sidebar navigation)
+  - `/components/legal/LegalButton.tsx` (consistent button component for legal pages)
+  - Enhanced CSS styling in `app/globals.css` for legal content typography and visual hierarchy
+- Agency Styling & Brand Guidelines v1 documentation (`docs/agency-styling-brand-guidelines-v1.md`) as comprehensive design system reference
+- Framer Motion integration for enhanced animations and motion effects
+- Copilot instructions updated with detailed development workflow and styling guidelines
 
 ### Rollback
 

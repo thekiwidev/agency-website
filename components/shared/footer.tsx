@@ -5,7 +5,6 @@ const quickLinks = [
   [
     { href: "/services", label: "Services" },
     { href: "/case-studies", label: "Case Studies" },
-    { href: "/pricing", label: "Pricing & Engagement" },
   ],
   [
     { href: "/about", label: "About" },
@@ -13,11 +12,11 @@ const quickLinks = [
     { href: "/insights", label: "Insights" },
   ],
   [
-    { href: "/privacy", label: "Privacy" },
-    { href: "/terms", label: "Terms" },
-    { href: "/security", label: "Security" },
-    { href: "/dpa", label: "DPA" },
-    { href: "/cookies", label: "Cookie Policy" },
+    { href: "/privacy-policy", label: "Privacy" },
+    { href: "/terms-of-service", label: "Terms" },
+    { href: "/security-policy", label: "Security" },
+    { href: "/data-processing-agreement", label: "DPA" },
+    { href: "/cookies-agreement", label: "Cookie Policy" },
   ],
 ];
 

@@ -146,103 +146,98 @@ export function CaseHighlightMarquee({
       role="region"
       aria-label="Featured case studies"
     >
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        {/* Section Header */}
-        <header className="text-center mb-16">
-          <h2
-            id="cases-heading"
-            className="text-3xl md:text-4xl font-bold mb-4"
-          >
-            Featured Case Studies
-          </h2>
-          <p className="text-lg text-white/70 max-w-2xl mx-auto">
-            Real projects with verified results across Web & Mobile, Security,
-            DevOps, Embedded, and AI/ML specializations.
-          </p>
-        </header>
+      {/* Section Header */}
+      <header className="text-center mb-16 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <h2 id="cases-heading" className="text-3xl md:text-4xl font-bold mb-4">
+          Featured Case Studies
+        </h2>
+        <p className="text-lg text-white/70 max-w-2xl mx-auto">
+          Real projects with verified results across Web & Mobile, Security,
+          DevOps, Embedded, and AI/ML specializations.
+        </p>
+      </header>
 
-        {/* Marquee Container - Using CSS module fade */}
+      {/* Marquee Container - Full width */}
+      <div
+        ref={shellRef}
+        className={`relative overflow-hidden ${styles["fadeout-horizontal"]}`}
+        onMouseEnter={() => {
+          hoverRef.current = true;
+          slowRef.current = slowFactor;
+        }}
+        onMouseLeave={() => {
+          hoverRef.current = false;
+          slowRef.current = 1;
+        }}
+      >
+        {/* Track */}
         <div
-          ref={shellRef}
-          className={`relative overflow-hidden ${styles["fadeout-horizontal"]}`}
-          onMouseEnter={() => {
-            hoverRef.current = true;
-            slowRef.current = slowFactor;
-          }}
-          onMouseLeave={() => {
-            hoverRef.current = false;
-            slowRef.current = 1;
+          ref={trackRef}
+          className="flex gap-6 md:gap-8 p-8"
+          style={{
+            transform: reducedMotion ? "none" : undefined,
+            willChange: "transform",
           }}
         >
-          {/* Track */}
-          <div
-            ref={trackRef}
-            className="flex gap-6 md:gap-8 p-8"
-            style={{
-              transform: reducedMotion ? "none" : undefined,
-              willChange: "transform",
-            }}
-          >
-            {allItems.map((item, index) => (
-              <article
-                key={`${item.slug}-${index}`}
-                className="relative w-[min(80vw,400px)] md:w-[460px] h-[500px] shrink-0 rounded-2xl overflow-hidden group hover:scale-105 transition-transform duration-300 ease-out"
-              >
-                {/* Full Background Image */}
-                <div className="absolute inset-0 overflow-hidden">
-                  <Image
-                    src={item.image.src}
-                    alt={item.image.alt}
-                    fill
-                    className="object-cover group-hover:scale-110 transition-transform duration-700 ease-out"
-                    sizes="(min-width: 1024px) 460px, 80vw"
-                    priority={index === 0}
-                  />
-                  {/* Dark overlay for better text contrast */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-black/10" />
+          {allItems.map((item, index) => (
+            <article
+              key={`${item.slug}-${index}`}
+              className="relative w-[min(80vw,400px)] md:w-[460px] h-[500px] shrink-0 rounded-2xl overflow-hidden group hover:scale-105 transition-transform duration-300 ease-out"
+            >
+              {/* Full Background Image */}
+              <div className="absolute inset-0 overflow-hidden">
+                <Image
+                  src={item.image.src}
+                  alt={item.image.alt}
+                  fill
+                  className="object-cover group-hover:scale-110 transition-transform duration-700 ease-out"
+                  sizes="(min-width: 1024px) 460px, 80vw"
+                  priority={index === 0}
+                />
+                {/* Dark overlay for better text contrast */}
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-black/10" />
+              </div>
+
+              {/* Content area with fixed height */}
+              <div className="relative h-full flex flex-col justify-between p-6">
+                {/* Service badge */}
+                <div className="flex justify-start">
+                  <span className="inline-block px-3 py-1 text-xs font-medium bg-white/20 backdrop-blur-sm rounded-full text-white border border-white/20">
+                    {item.service}
+                  </span>
                 </div>
 
-                {/* Content area with fixed height */}
-                <div className="relative h-full flex flex-col justify-between p-6">
-                  {/* Service badge */}
-                  <div className="flex justify-start">
-                    <span className="inline-block px-3 py-1 text-xs font-medium bg-white/20 backdrop-blur-sm rounded-full text-white border border-white/20">
-                      {item.service}
-                    </span>
-                  </div>
-
-                  {/* Floating text content card */}
-                  <div className="bg-white/95 backdrop-blur-sm rounded-xl p-5 border border-white/20 shadow-lg">
-                    <h3 className="font-semibold text-gray-900 mb-3 line-clamp-1 text-base">
-                      {item.title}
-                    </h3>
-                    <p className="text-sm text-gray-600 mb-4 line-clamp-2">
-                      {item.summary}
-                    </p>
-                    <Link
-                      href={item.slug}
-                      className="inline-flex items-center text-sm text-blue-600 hover:text-blue-800 transition-colors font-medium"
+                {/* Floating text content card */}
+                <div className="bg-white/95 backdrop-blur-sm rounded-xl p-5 border border-white/20 shadow-lg">
+                  <h3 className="font-semibold text-gray-900 mb-3 line-clamp-1 text-base">
+                    {item.title}
+                  </h3>
+                  <p className="text-sm text-gray-600 mb-4 line-clamp-2">
+                    {item.summary}
+                  </p>
+                  <Link
+                    href={item.slug}
+                    className="inline-flex items-center text-sm text-blue-600 hover:text-blue-800 transition-colors font-medium"
+                  >
+                    {item.ctaLabel || "Read the case study"}
+                    <svg
+                      className="ml-1 w-4 h-4"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
                     >
-                      {item.ctaLabel || "Read the case study"}
-                      <svg
-                        className="ml-1 w-4 h-4"
-                        fill="none"
-                        stroke="currentColor"
-                        viewBox="0 0 24 24"
-                      >
-                        <path
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          strokeWidth={2}
-                          d="M9 5l7 7-7 7"
-                        />
-                      </svg>
-                    </Link>
-                  </div>
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M9 5l7 7-7 7"
+                      />
+                    </svg>
+                  </Link>
                 </div>
-              </article>
-            ))}
-          </div>
+              </div>
+            </article>
+          ))}
         </div>
       </div>
     </section>
