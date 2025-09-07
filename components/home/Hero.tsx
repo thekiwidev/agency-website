@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button";
+import { BOOK_CALL_URL, GET_QUOTE_URL } from "@/lib/links";
 import Image from "next/image";
 import { PATTERN_GLYPHS_80, PatternSheet } from "../design/PatternSheet";
 
@@ -65,7 +66,7 @@ export default function Hero() {
 
               <div className="mt-7 flex flex-wrap gap-3">
                 <Button asChild size="lg" className="px-6 py-4">
-                  <a href="/contact#quote">Get a Quote</a>
+                  <a href={GET_QUOTE_URL}>Get a Quote</a>
                 </Button>
                 <Button
                   asChild
@@ -73,7 +74,7 @@ export default function Hero() {
                   variant="secondary"
                   className="px-6 py-4"
                 >
-                  <a href="/contact#call">Book a Call</a>
+                  <a href={BOOK_CALL_URL}>Book a Call</a>
                 </Button>
               </div>
             </div>

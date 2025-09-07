@@ -1,10 +1,11 @@
 // Purpose: Site header with agency wordmark and navigation.
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
+import { GET_QUOTE_URL } from "@/lib/links";
 
 const nav = [
   { href: "/case-studies", label: "Case Studies" },
-  { href: "/#services", label: "Services" },
+  { href: "/services", label: "Services" },
   { href: "/about-us", label: "About" },
 ];
 
@@ -31,7 +32,7 @@ export default function Header() {
           ))}
         </nav>
         <div className="flex items-center">
-          <Button asChild href="/contact#quote" size="sm">
+          <Button asChild href={GET_QUOTE_URL} size="sm">
             <span>Get a Quote</span>
           </Button>
         </div>

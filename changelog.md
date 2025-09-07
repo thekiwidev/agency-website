@@ -56,6 +56,16 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Agency Styling & Brand Guidelines v1 documentation as single source of truth for design system
 - Enhanced legal content CSS classes for improved typography and visual hierarchy
 - Framer Motion dependency for enhanced animations and motion effects
+- Global SEO infrastructure: `metadataBase`, title template, canonical defaults, OpenGraph/Twitter config in `app/layout.tsx`.
+- Structured data system: `lib/schema.ts`, `components/seo/StructuredData.tsx`, `components/seo/Breadcrumbs.tsx` (JSON-LD for Organization, WebSite, Services, Case Studies; foundation for JobPosting & FAQ).
+- Sitemap + robots: `app/sitemap.ts`, `app/robots.ts` with dynamic URL generation (services, case studies, future jobs).
+- Services hub route `app/services/page.tsx` + interactive detail experience (`components/services/ServicesPage.tsx`, `components/services/data.ts`).
+- Open Graph image generation endpoint `app/opengraph-image.tsx`.
+- Central CTA/url helpers: `lib/links.ts`, SEO utilities `lib/seo.ts`, lightweight indexers `lib/content-index.ts`.
+- Analytics consent + event tracking: `components/analytics/ConsentManager.tsx`, `components/analytics/events.ts`.
+- Security headers & CSP + remote image patterns added in `next.config.ts`.
+- Schema validation script `scripts/validate-schema.js` + npm script `schema:lint`.
+- Changelog generation script `scripts/generate-changelog-from-git.js` + npm script `changelog:generate`.
 
 ### Removed - v0.2.0
 
@@ -70,6 +80,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   - `components/about/Leadership.tsx`
   - `components/about/CareersCTA.tsx`
   - `components/about/HowWeWork.tsx` (replaced by shared Process)
+  - Legacy `components/home/FAQ.tsx` (superseded by new structured FAQSection with JSON-LD)
 
 ### Changed - v0.2.0
 
@@ -98,6 +109,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   - Process cards use blue backgrounds (bg-blue-900/80 active, bg-blue-900/40 inactive) with blue accents
   - Process steps now use Phosphor icons (PiChatCircle, PiMagnifyingGlass, PiWallet, PiWrench, PiPackage)
   - Placeholder images sourced from Unsplash with descriptive alt text for each process step
+
 - Images on mobile have reduced opacity (opacity-20) for subtle background effect when used as overlay
 
 - Case study section redesigned from static grid to continuous marquee layout:
@@ -193,6 +205,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Bun lockfile updated to include new dependencies
 
 - Header navigation simplified and realigned
+
   - Show only: Case Studies, Services, About
   - Services links to home section anchor (`/#services`)
   - Pricing and Contact removed from header nav (CTA retained)
@@ -263,6 +276,15 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   - Enhanced CSS styling in `app/globals.css` for legal content typography and visual hierarchy
 - Agency Styling & Brand Guidelines v1 documentation (`docs/agency-styling-brand-guidelines-v1.md`) as comprehensive design system reference
 - Framer Motion integration for enhanced animations and motion effects
+- Refactored `app/layout.tsx` to structured metadata object (title template, canonical, OpenGraph, Twitter) enabling consistent page-level overrides.
+- Added explicit canonical (`alternates.canonical`) to key routes (`/case-studies`, `/about-us`, `/services`).
+- Replaced inline About page JSON-LD with reusable `<StructuredData />` + centralized `orgSchema`.
+- Added `<Breadcrumbs />` (visual + schema) to About & Case Studies for internal linking depth.
+- Standardized all quote/call CTAs to `GET_QUOTE_URL` / `BOOK_CALL_URL` constants; removed hardcoded `/contact` anchors.
+- Updated header & footer “Services” link from `/#services` anchor to new `/services` route.
+- Expanded Case Studies page metadata with OpenGraph fields + canonical.
+- Introduced security headers (HSTS, CSP, Referrer-Policy, X-Content-Type-Options, Permissions-Policy, X-Frame-Options) via `next.config.ts`.
+- Normalized CTA button usage across hero, services hub, legal, about pages for SEO + conversion consistency.
 - Copilot instructions updated with detailed development workflow and styling guidelines
 
 ### Rollback

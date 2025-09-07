@@ -19,10 +19,27 @@ const mooxy = localFont({
 });
 
 export const metadata: Metadata = {
-  title:
-    "Specialist Software Engineering, Security, DevOps, Embedded, AI/ML — agency",
+  metadataBase: new URL(
+    process.env.NEXT_PUBLIC_SITE_URL || "https://www.agency-domain.com"
+  ),
+  title: {
+    default: "Specialist Software Engineering Agency",
+    template: "%s — Agency",
+  },
   description:
     "Contract‑based teams for Web & Mobile, Cyber Security, DevOps, Embedded Systems, and AI/ML. Fast discovery. Quote in under 48 hours. Build with specialists, bill by the hour.",
+  openGraph: {
+    type: "website",
+    siteName: "Agency",
+    url: process.env.NEXT_PUBLIC_SITE_URL || "https://www.agency-domain.com",
+  },
+  twitter: {
+    card: "summary_large_image",
+    creator: "@agency",
+    site: "@agency",
+  },
+  icons: { icon: "/favicon.ico" },
+  alternates: { canonical: "/" },
 };
 
 export default function RootLayout({

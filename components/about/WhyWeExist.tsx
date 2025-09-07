@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import Link from "next/link";
+import { BOOK_CALL_URL, GET_QUOTE_URL } from "@/lib/links";
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -157,7 +158,7 @@ export default function WhyWeExist() {
                   size="lg"
                   aria-label="Get a quote for our engineering services"
                 >
-                  <Link href="/contact?tab=quote">Get a Quote</Link>
+                  <Link href={GET_QUOTE_URL}>Get a Quote</Link>
                 </Button>
                 <Button
                   asChild
@@ -165,7 +166,7 @@ export default function WhyWeExist() {
                   size="lg"
                   aria-label="Book a call to discuss your project"
                 >
-                  <Link href="/contact?tab=call">Book a Call</Link>
+                  <Link href={BOOK_CALL_URL}>Book a Call</Link>
                 </Button>
               </div>
             </motion.div>

@@ -1,15 +1,24 @@
 import Image from "next/image";
 import Link from "next/link";
+import type { Metadata } from "next";
 import { Button } from "@/components/ui/button";
+import { Breadcrumbs } from "@/components/seo/Breadcrumbs";
 import { caseStudies, caseStudyFilters } from "@/components/home/caseData";
 import FAQSection from "@/components/home/FAQSection";
 import FinalCTA from "@/components/home/FinalCTA";
+import { BOOK_CALL_URL, GET_QUOTE_URL } from "@/lib/links";
 
-export const metadata = {
-  title:
-    "Case Studies — Proven outcomes in Web/Mobile, Security, DevOps, Embedded, AI/ML",
+export const metadata: Metadata = {
+  title: "Case Studies — Proven outcomes in Web/Mobile, Security, DevOps, Embedded, AI/ML",
   description:
     "Real projects with verified results. Explore how we delivered safer systems, faster releases, lower costs, and better user outcomes across industries.",
+  alternates: { canonical: "/case-studies" },
+  openGraph: {
+    title: "Case Studies — Agency",
+    description:
+      "Real projects with verified results across Web & Mobile, Security, DevOps, Embedded, and AI/ML.",
+    url: "/case-studies",
+  },
 };
 
 export default function CaseStudiesListingPage() {
@@ -24,6 +33,7 @@ export default function CaseStudiesListingPage() {
       <section className="py-16 md:py-24 bg-navy-900 text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-start">
           <div>
+            <Breadcrumbs items={[{ href: "/", label: "Home" }, { href: "/case-studies", label: "Case Studies" }]} />
             <h1 className="text-4xl md:text-5xl font-bold tracking-tight mb-4">
               Outcomes that hold up under load
             </h1>
@@ -45,10 +55,10 @@ export default function CaseStudiesListingPage() {
 
             <div className="flex flex-wrap gap-3">
               <Button asChild variant="primary">
-                <a href="/contact?tab=quote">Get a Quote</a>
+                <a href={GET_QUOTE_URL}>Get a Quote</a>
               </Button>
               <Button asChild variant="secondary">
-                <a href="/contact?tab=call">Book a Call</a>
+                <a href={BOOK_CALL_URL}>Book a Call</a>
               </Button>
             </div>
           </div>

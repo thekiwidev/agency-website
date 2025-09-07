@@ -3,6 +3,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
+import { BOOK_CALL_URL } from "@/lib/links";
 import { Button } from "@/components/ui/button";
 
 type Card = {
@@ -183,7 +184,7 @@ export default function Services() {
             asChild
             className="px-6 py-4 font-semibold bg-white !text-black hover:bg-white/90 hover:!text-black"
           >
-            <Link href="/contact#call">
+            <Link href={BOOK_CALL_URL}>
               Not sure where to start? Book a Call
             </Link>
           </Button>

@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
+import { BOOK_CALL_URL, GET_QUOTE_URL } from "@/lib/links";
 import Image from "next/image";
 
 export default function Hero() {
@@ -42,10 +43,10 @@ export default function Hero() {
             {/* CTA Buttons */}
             <div className="flex flex-wrap gap-4">
               <Button asChild size="lg">
-                <Link href="/contact?tab=quote">Get a Quote</Link>
+                <Link href={GET_QUOTE_URL}>Get a Quote</Link>
               </Button>
               <Button asChild variant="secondary" size="lg">
-                <Link href="/contact?tab=call">Book a Call</Link>
+                <Link href={BOOK_CALL_URL}>Book a Call</Link>
               </Button>
             </div>
           </div>

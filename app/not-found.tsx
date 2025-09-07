@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { GET_QUOTE_URL } from "@/lib/links";
 import { Button } from "@/components/ui/button";
 
 export default function NotFound() {
@@ -36,7 +37,7 @@ export default function NotFound() {
               About Us
             </Link>
             <span className="text-white/30">•</span>
-            <Link className="underline decoration-white/30 hover:decoration-white" href="/contact?tab=quote">
+            <Link className="underline decoration-white/30 hover:decoration-white" href={GET_QUOTE_URL}>
               Get a Quote
             </Link>
           </div>
