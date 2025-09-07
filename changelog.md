@@ -9,6 +9,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added - v0.2.0
 
+- Case Studies listing page at `app/case-studies/page.tsx` with hero section, brand-aligned copy, and CTA buttons
+- Dynamic case study detail pages at `app/case-studies/[slug]/page.tsx` with `generateStaticParams` and per-case metadata
+- At-a-glance panel on detail pages showing client, industry, services, stack, timeline, and key metrics
+- Local image assets for case studies under `public/images/*` and wired in `components/home/caseData.ts`
+
 - Trust section with animated marquee of client logos using React icons
 - Extended security and compliance badge collection with 10 service guarantees
 - Horizontal fade effect for seamless marquee transitions
@@ -66,6 +71,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   - `components/about/HowWeWork.tsx` (replaced by shared Process)
 
 ### Changed - v0.2.0
+
+- Case study listing hero expanded to a two-column layout with stats card; follows brand guidelines (`bg-navy-900`, `bg-navy-800`, `border-white/10`)
+- Case study cards on listing now use the same marquee card style as homepage (full-bleed image, gradient overlay, floating content card)
+- `components/home/CaseHighlightMarquee.tsx` refactored to consume the new `CaseStudy` type and fields (`hero`, `services`, `cta`)
+- `components/home/caseData.ts` images updated to local assets with accurate dimensions and alt text
 
 - Trust component redesigned with icon-first approach instead of external images
 - Logo cards now display company names alongside icons in flex layout

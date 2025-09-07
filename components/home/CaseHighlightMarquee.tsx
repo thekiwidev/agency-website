@@ -3,11 +3,11 @@
 import { useCallback, useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { CaseItem } from "./caseData";
+import type { CaseStudy } from "./caseData";
 import styles from "../../services/marquee.module.css";
 
 interface CaseHighlightMarqueeProps {
-  items: CaseItem[];
+  items: CaseStudy[];
   speed?: number; // default 70 px/s
   slowFactor?: number; // default 0.25
   paused?: boolean; // controlled pause
@@ -187,8 +187,8 @@ export function CaseHighlightMarquee({
               {/* Full Background Image */}
               <div className="absolute inset-0 overflow-hidden">
                 <Image
-                  src={item.image.src}
-                  alt={item.image.alt}
+                  src={item.hero.src}
+                  alt={item.hero.alt}
                   fill
                   className="object-cover group-hover:scale-110 transition-transform duration-700 ease-out"
                   sizes="(min-width: 1024px) 460px, 80vw"
@@ -203,7 +203,7 @@ export function CaseHighlightMarquee({
                 {/* Service badge */}
                 <div className="flex justify-start">
                   <span className="inline-block px-3 py-1 text-xs font-medium bg-white/20 backdrop-blur-sm rounded-full text-white border border-white/20">
-                    {item.service}
+                    {item.services?.[0] || item.industry?.[0] || "Case Study"}
                   </span>
                 </div>
 
@@ -216,10 +216,10 @@ export function CaseHighlightMarquee({
                     {item.summary}
                   </p>
                   <Link
-                    href={item.slug}
+                    href={item.cta?.href || `/case-studies/${item.slug}`}
                     className="inline-flex items-center text-sm text-blue-600 hover:text-blue-800 transition-colors font-medium"
                   >
-                    {item.ctaLabel || "Read the case study"}
+                    {item.cta?.label || "Read the case study"}
                     <svg
                       className="ml-1 w-4 h-4"
                       fill="none"
