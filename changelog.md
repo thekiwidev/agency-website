@@ -13,6 +13,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Dynamic case study detail pages at `app/case-studies/[slug]/page.tsx` with `generateStaticParams` and per-case metadata
 - At-a-glance panel on detail pages showing client, industry, services, stack, timeline, and key metrics
 - Local image assets for case studies under `public/images/*` and wired in `components/home/caseData.ts`
+- Branded 500 error page at `app/error.tsx` with retry, CTAs, and debug details toggle
 
 - Trust section with animated marquee of client logos using React icons
 - Extended security and compliance badge collection with 10 service guarantees
@@ -76,6 +77,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Case study cards on listing now use the same marquee card style as homepage (full-bleed image, gradient overlay, floating content card)
 - `components/home/CaseHighlightMarquee.tsx` refactored to consume the new `CaseStudy` type and fields (`hero`, `services`, `cta`)
 - `components/home/caseData.ts` images updated to local assets with accurate dimensions and alt text
+- 404 page redesigned with modern, brand-aligned layout and shared Button CTAs
 
 - Trust component redesigned with icon-first approach instead of external images
 - Logo cards now display company names alongside icons in flex layout
@@ -207,6 +209,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Fixed - v0.2.0
 
 - Trust component file corruption issues resolved
+- Services navigation now anchors to Home Services section (`/#services`) from header and footer
 - Icon imports properly configured for Feather Icons and Simple Icons
 - TypeScript compilation errors in testimonials component resolved
 - Property name mismatches fixed (country→location, image→photo.src, organization→org)
