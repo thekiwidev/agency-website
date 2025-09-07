@@ -3,16 +3,14 @@ import Link from "next/link";
 import { Button } from "@/components/ui/button";
 
 const nav = [
-  { href: "/services", label: "Services" },
   { href: "/case-studies", label: "Case Studies" },
-  { href: "/pricing", label: "Pricing" },
+  { href: "/#services", label: "Services" },
   { href: "/about-us", label: "About" },
-  { href: "/contact", label: "Contact" },
 ];
 
 export default function Header() {
   return (
-    <header className="absolute top-0 left-0 right-0 z-50 bg-navy-900 border-b border-white/10">
+    <header className="z-50 bg-navy-900 border-b border-white/10">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
         <Link
           href="/"
@@ -20,7 +18,8 @@ export default function Header() {
         >
           agency
         </Link>
-        <nav className="hidden md:flex gap-6 text-sm">
+        {/* Nav aligned to the right, next to CTA on desktop */}
+        <nav className="hidden md:flex ml-auto mr-8 gap-6 text-sm">
           {nav.map((n) => (
             <Link
               key={n.href}

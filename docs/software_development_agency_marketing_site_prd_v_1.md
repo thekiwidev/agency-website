@@ -1,19 +1,7 @@
 # Product Requirements Document (PRD)
 
 **Product**: Software Development Agency Marketing Website  
-\*\*Versio### 6.3 ### 6.3 Service Detail Pages (one per specialization)
-
-Common sections:
-
-- Problem/Outcome framing; who it's for.
-- Capabilities list with sub‑services.
-- Delivery model: hourly billing, typical roles, team composition.
-- Process and SLAs.
-- Sample deliverables and timelines.(MVP -> V1.1 -> V2)
-- Toolchain & compliance notes.
-- Case study carousel filtered to this service.
-- FAQ + CTA.il Pages (one per specialization)
-
+**Version**: 1.0 (MVP -> V1.1 -> V2)  
 **Owner**: Agency Ops / Growth  
 **Primary Goals**: Generate qualified leads, streamline quoting, build trust with B2B buyers, recruit contractors.
 
@@ -120,7 +108,7 @@ A modern, high‑conversion marketing site for a contractor‑driven software ag
 
 ### 6.3 Service Detail Pages (one per specialization)
 
-#### **Common sections**
+### Common sections
 
 - Problem/Outcome framing; who it’s for.
 - Capabilities list with sub‑services.

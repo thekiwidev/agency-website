@@ -51,6 +51,20 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Enhanced legal content CSS classes for improved typography and visual hierarchy
 - Framer Motion dependency for enhanced animations and motion effects
 
+### Removed - v0.2.0
+
+- About page: removed sections to streamline narrative
+  - Fast Facts
+  - What We Do
+  - Leadership
+  - Careers CTA
+- Deleted unused components no longer referenced
+  - `components/about/FastFacts.tsx`
+  - `components/about/WhatWeDo.tsx`
+  - `components/about/Leadership.tsx`
+  - `components/about/CareersCTA.tsx`
+  - `components/about/HowWeWork.tsx` (replaced by shared Process)
+
 ### Changed - v0.2.0
 
 - Trust component redesigned with icon-first approach instead of external images
@@ -72,7 +86,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   - Process cards use blue backgrounds (bg-blue-900/80 active, bg-blue-900/40 inactive) with blue accents
   - Process steps now use Phosphor icons (PiChatCircle, PiMagnifyingGlass, PiWallet, PiWrench, PiPackage)
   - Placeholder images sourced from Unsplash with descriptive alt text for each process step
-  - Images on mobile have reduced opacity (opacity-20) for subtle background effect when used as overlay
+- Images on mobile have reduced opacity (opacity-20) for subtle background effect when used as overlay
 
 - Case study section redesigned from static grid to continuous marquee layout:
 
@@ -165,6 +179,20 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Enhanced legal content styling with comprehensive CSS rules for headings, lists, links, code blocks, tables, and blockquotes
 - Copilot instructions updated with new sections and guidelines for styling, components, and development workflow
 - Bun lockfile updated to include new dependencies
+
+- Header navigation simplified and realigned
+  - Show only: Case Studies, Services, About
+  - Services links to home section anchor (`/#services`)
+  - Pricing and Contact removed from header nav (CTA retained)
+  - Navigation aligned to the right adjacent to the CTA
+
+- About page composition updates
+  - Replaced “How we work” with shared `components/home/Process` section
+  - Swapped custom About FAQ block for shared `components/home/FAQSection`
+  - Added shared `components/home/FinalCTA` at page end before footer
+  - “Why we exist” now uses a two-column layout with an illustrative image
+  - Merged “signals” into color-coded chips on their own lines (red problems, blue responses)
+  - Metrics chips now size to content while keeping consistent padding and radius
 
 ### Fixed - v0.2.0
 
