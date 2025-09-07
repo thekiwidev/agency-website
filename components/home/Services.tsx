@@ -108,7 +108,7 @@ const textPaddingClasses = (where: Card["offset"]) => {
 
 export default function Services() {
   return (
-    <section className="py-16 sm:py-20 bg-navy-900 text-foreground-dark">
+    <section id="services" className="py-16 sm:py-20 bg-navy-900 text-foreground-dark">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <header className="mx-auto max-w-4xl text-center">
           <h2 className="text-4xl sm:text-5xl font-semibold tracking-tight">
