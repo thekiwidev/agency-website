@@ -33,7 +33,7 @@ export function ConsentManager() {
       document.head.appendChild(inline);
 
       const plausible = document.createElement("script");
-      plausible.setAttribute("data-domain", "agency-domain.com");
+      plausible.setAttribute("data-domain", "p-diamond-domain.com");
       plausible.src = "https://plausible.io/js/script.js";
       plausible.defer = true;
       document.head.appendChild(plausible);
@@ -45,10 +45,19 @@ export function ConsentManager() {
     <div className="fixed bottom-4 right-4 bg-navy-800 p-4 rounded shadow text-sm max-w-xs border border-white/10">
       <p className="mb-2">Allow analytics cookies?</p>
       <div className="flex gap-2">
-        <button onClick={() => setConsent(true)} className="px-3 py-1 bg-white text-black rounded">Allow</button>
-        <button onClick={() => setConsent(false)} className="px-3 py-1 border border-white/30 rounded">Decline</button>
+        <button
+          onClick={() => setConsent(true)}
+          className="px-3 py-1 bg-white text-black rounded"
+        >
+          Allow
+        </button>
+        <button
+          onClick={() => setConsent(false)}
+          className="px-3 py-1 border border-white/30 rounded"
+        >
+          Decline
+        </button>
       </div>
     </div>
   );
 }
-

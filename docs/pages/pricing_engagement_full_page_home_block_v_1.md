@@ -1,12 +1,12 @@
 # Pricing & Engagement — Full Page + Home Block (V1)
 
-> Replace **[Agency]** with your brand. Rates reflect your stated range: **\$15–\$25/hour**, hourly T&M by default. All examples are estimates, not binding quotes.
+> Replace **P-Diamond** with your brand. Rates reflect your stated range: **\$15–\$25/hour**, hourly T&M by default. All examples are estimates, not binding quotes.
 
 ---
 
 ## SEO (for the full page)
 
-**Meta title**: Pricing & Engagement — Hourly specialists, clear estimates — [Agency]\
+**Meta title**: Pricing & Engagement — Hourly specialists, clear estimates — P-Diamond\
 **Meta description**: Simple hourly pricing (\$15–\$25/hr). Estimate your project cost by service, complexity, and duration. Hourly T&M by default. Quote in under 48 hours after discovery.
 
 ---

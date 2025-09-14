@@ -1,9 +1,11 @@
 export const orgSchema = {
   "@context": "https://schema.org",
   "@type": "Organization",
-  name: "Agency",
-  url: process.env.NEXT_PUBLIC_SITE_URL || "https://www.agency-domain.com",
-  logo: `${process.env.NEXT_PUBLIC_SITE_URL || "https://www.agency-domain.com"}/favicon.ico`,
+  name: "P-Diamond",
+  url: process.env.NEXT_PUBLIC_SITE_URL || "https://www.p-diamond-domain.com",
+  logo: `${
+    process.env.NEXT_PUBLIC_SITE_URL || "https://www.p-diamond-domain.com"
+  }/svg/p-diamond-icon-logo.svg`,
   sameAs: [
     // Fill in as you add them
     // "https://www.linkedin.com/company/...",
@@ -13,26 +15,25 @@ export const orgSchema = {
 export const websiteSchema = {
   "@context": "https://schema.org",
   "@type": "WebSite",
-  name: "Agency",
-  url: process.env.NEXT_PUBLIC_SITE_URL || "https://www.agency-domain.com",
+  name: "P-Diamond",
+  url: process.env.NEXT_PUBLIC_SITE_URL || "https://www.p-diamond-domain.com",
   potentialAction: {
     "@type": "SearchAction",
-    target: `${process.env.NEXT_PUBLIC_SITE_URL || "https://www.agency-domain.com"}/search?q={search_term_string}`,
+    target: `${
+      process.env.NEXT_PUBLIC_SITE_URL || "https://www.p-diamond-domain.com"
+    }/search?q={search_term_string}`,
     "query-input": "required name=search_term_string",
   },
 };
 
-export function serviceSchema(s: {
-  title: string;
-  summary: string;
-}) {
+export function serviceSchema(s: { title: string; summary: string }) {
   return {
     "@context": "https://schema.org",
     "@type": "Service",
     name: s.title,
     description: s.summary,
     areaServed: "Global",
-    provider: { "@type": "Organization", name: "Agency" },
+    provider: { "@type": "Organization", name: "P-Diamond" },
     offers: {
       "@type": "Offer",
       priceSpecification: {
@@ -57,11 +58,14 @@ export function caseStudySchema(c: {
 }) {
   const outcomesArray: string[] = Array.isArray(c.outcomes)
     ? (c.outcomes as Array<{ label?: string; value?: string } | string>)
-        .map((o) => (typeof o === "string" ? o : `${o.label ?? ""}: ${o.value ?? ""}`))
+        .map((o) =>
+          typeof o === "string" ? o : `${o.label ?? ""}: ${o.value ?? ""}`
+        )
         .filter((s): s is string => Boolean(s))
     : [];
 
-  const base = process.env.NEXT_PUBLIC_SITE_URL || "https://www.agency-domain.com";
+  const base =
+    process.env.NEXT_PUBLIC_SITE_URL || "https://www.p-diamond-domain.com";
   return {
     "@context": "https://schema.org",
     "@type": "CaseStudy",
@@ -71,7 +75,7 @@ export function caseStudySchema(c: {
     industry: c.industry?.[0],
     about: c.problem,
     result: outcomesArray,
-    author: { "@type": "Organization", name: "Agency" },
+    author: { "@type": "Organization", name: "P-Diamond" },
   } as const;
 }
 
@@ -91,7 +95,12 @@ export function jobPostingSchema(job: {
     title: job.title,
     description: job.htmlDescription,
     employmentType: job.type,
-    hiringOrganization: { "@type": "Organization", name: "Agency", sameAs: process.env.NEXT_PUBLIC_SITE_URL || "https://www.agency-domain.com" },
+    hiringOrganization: {
+      "@type": "Organization",
+      name: "P-Diamond",
+      sameAs:
+        process.env.NEXT_PUBLIC_SITE_URL || "https://www.p-diamond-domain.com",
+    },
     jobLocationType: "TELECOMMUTE",
     applicantLocationRequirements: { "@type": "Country", name: "Global" },
     datePosted: job.datePosted,
@@ -99,7 +108,12 @@ export function jobPostingSchema(job: {
     baseSalary: {
       "@type": "MonetaryAmount",
       currency: job.currency || "USD",
-      value: { "@type": "QuantitativeValue", minValue: job.min ?? 15, maxValue: job.max ?? 25, unitText: "HOUR" },
+      value: {
+        "@type": "QuantitativeValue",
+        minValue: job.min ?? 15,
+        maxValue: job.max ?? 25,
+        unitText: "HOUR",
+      },
     },
   } as const;
 }
@@ -116,10 +130,9 @@ export function faqSchema(items: { q: string; a: string }[]) {
   } as const;
 }
 
-export function breadcrumbsSchema(
-  crumbs: { label: string; href: string }[],
-) {
-  const base = process.env.NEXT_PUBLIC_SITE_URL || "https://www.agency-domain.com";
+export function breadcrumbsSchema(crumbs: { label: string; href: string }[]) {
+  const base =
+    process.env.NEXT_PUBLIC_SITE_URL || "https://www.p-diamond-domain.com";
   return {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",

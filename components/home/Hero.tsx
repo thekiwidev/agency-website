@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button";
 import { BOOK_CALL_URL, GET_QUOTE_URL } from "@/lib/links";
 import Image from "next/image";
 import { PATTERN_GLYPHS_80, PatternSheet } from "../design/PatternSheet";
+import { PiGlobe, PiCircuitryBold, PiGear } from "react-icons/pi";
 
 export default function Hero() {
   return (
@@ -50,12 +51,18 @@ export default function Hero() {
             {/* LEFT: avatars + blurb + CTAs */}
             <div className="lg:col-span-4">
               <div className="flex -space-x-2 mb-5">
-                {[1, 2, 3].map((i) => (
-                  <span
+                {[
+                  { icon: PiGlobe, label: "Web & Mobile" },
+                  { icon: PiCircuitryBold, label: "Embedded Systems" },
+                  { icon: PiGear, label: "DevOps" },
+                ].map(({ icon: Icon, label }, i) => (
+                  <div
                     key={i}
-                    className="inline-flex h-10 w-10 rounded-full ring-2 ring-navy-900 bg-white/10 backdrop-blur-sm"
-                    aria-hidden
-                  />
+                    className="inline-flex h-10 w-10 rounded-full ring-2 ring-navy-900 bg-white/10 backdrop-blur-sm items-center justify-center"
+                    title={label}
+                  >
+                    <Icon className="h-5 w-5 text-white/80" />
+                  </div>
                 ))}
               </div>
 

@@ -5,6 +5,46 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.3.0] - 2025-09-14
+
+### Added - v0.3.0
+
+- P-Diamond brand rebranding across entire site
+- New brand assets: p-diamond-logo-landscape.svg, p-diamond-icon.svg, p-diamond-og.png
+- Service icons in hero section: PiGlobe (Web & Mobile), PiCircuitryBold (Embedded Systems), PiGear (DevOps)
+- Updated favicon and app icons to use p-diamond-icon.svg
+- Enhanced Open Graph and Twitter card images with p-diamond-og.png
+- Updated JSON-LD structured data with P-Diamond branding
+- Fixed broken Unsplash testimonial image with working portrait
+
+### Changed - v0.3.0
+
+- Global brand name replacement: "Agency" → "P-Diamond" across all copy, metadata, and schemas
+- Updated package.json name from "agency" to "p-diamond"
+- Header logo updated to use p-diamond-logo-landscape.svg
+- Footer logo updated to use p-diamond-footer-logo.svg with larger size
+- All asset paths updated to use /svg/ folder structure
+- Hero section overlapping circles replaced with service icons
+- Updated domain references from agency-domain.com to p-diamond-domain.com
+- Enhanced footer logo with proper theming and larger display
+
+### Fixed - v0.3.0
+
+- Broken testimonial image replaced with working Unsplash portrait
+- Conflicting favicon.ico and page file error resolved
+- All lint and typecheck errors resolved
+- Build process optimized and verified
+
+### Technical - v0.3.0
+
+- Updated all image references to use /svg/ folder structure
+- Enhanced hero section with meaningful service icons instead of placeholder circles
+- Improved accessibility with proper alt text and tooltips for service icons
+- Optimized logo assets for better theming with currentColor support
+- Updated metadata and structured data for improved SEO
+
+## [0.2.0] - [Unreleased]
+
 ## [0.2.0] - [Unreleased]
 
 ### Added - v0.2.0

@@ -1,12 +1,12 @@
 # Contact · Request a Quote · Book a Call — V1
 
-> Replace **[Agency]** with your brand. Single page that unifies 6.9 (Contact/Quote) and 6.10 (Book a Call). Supports Cal.com or Calendly. All forms flow into CRM and email. Rates: **\$15–\$25/hr**.
+> Replace **P-Diamond** with your brand. Single page that unifies 6.9 (Contact/Quote) and 6.10 (Book a Call). Supports Cal.com or Calendly. All forms flow into CRM and email. Rates: **\$15–\$25/hr**.
 
 ---
 
 ## SEO
 
-**Meta title**: Contact, Request a Quote, or Book a Call — [Agency]\
+**Meta title**: Contact, Request a Quote, or Book a Call — P-Diamond\
 **Meta description**: Talk to engineers today. Book a call, request a scoped quote, or send a message. Hourly pricing \$15–\$25/hr. Quote in under 48 hours after discovery.
 
 ---
@@ -33,7 +33,7 @@
 
 ### **Contact info**
 
-- **Email**: hello@[agency].com · **Sales**: sales@[agency].com · **Support**: support@[agency].com
+- **Email**: hello@p-diamond.com · **Sales**: sales@p-diamond.com · **Support**: support@p-diamond.com
 - **Phone/WA**: [+1 (XXX) XXX‑XXXX] (US reception hours)
 - **Time zones**: US and EU/West Africa overlap (min 4 hours)
 - **Address**: US‑registered entity [state], remote‑first team
@@ -62,14 +62,14 @@ Short intro: Schedule a 30‑ or 45‑minute discovery with a lead engineer. Bri
 <!-- Cal.com embed -->
 <div id="cal-embed"></div>
 <script>
-  window.Calcom = { namespace: "agency" };
+  window.Calcom = { namespace: "p-diamond" };
 </script>
 <link href="https://cal.com/embed/embed.css" rel="stylesheet" />
 <script src="https://cal.com/embed/embed.js" async></script>
 <script>
   Calcom.embed({
     element: document.getElementById("cal-embed"),
-    calLink: "https://cal.com/[agency]/discovery",
+    calLink: "https://cal.com/p-diamond/discovery",
     layout: "month_view",
   });
 </script>
@@ -140,9 +140,9 @@ Short intro: Use this for support, partnership, or general questions. For scoped
 
 ### Auto‑routing
 
-- Support → support@[agency].com
-- Sales → sales@[agency].com
-- Others → hello@[agency].com
+- Support → support@p-diamond.com
+- Sales → sales@p-diamond.com
+- Others → hello@p-diamond.com
 
 **SLA**: We aim to respond within 2 business hours.
 
@@ -161,7 +161,7 @@ Short intro: Use this for support, partnership, or general questions. For scoped
 ## Confirmation Emails (templates)
 
 **Quote request — to requester**\
-Subject: We received your request — [Agency]\
+Subject: We received your request — P-Diamond\
 Body: Thanks for the details. We’ll review and follow up within 2 business hours. Expect a scoped quote within 48 hours after the discovery call. Manage your booking here: [cal link].
 
 **Call booking — to requester**\
@@ -169,7 +169,7 @@ Subject: Your discovery call is booked — [date/time]\
 Body: You’re all set. Add agenda items or links by replying to this email.
 
 **General contact — to requester**\
-Subject: We got your message — [Agency]\
+Subject: We got your message — P-Diamond\
 Body: Thanks for reaching out. We’ll reply shortly. If you need to talk now, pick a time here: [cal link].
 
 **Internal alert**\
@@ -222,13 +222,13 @@ Microcopy: First reply in **< 2 hours**. Quote in **< 48 hours** after discovery
 {
   "scheduler": {
     "provider": "cal.com",
-    "link": "https://cal.com/[agency]/discovery",
+    "link": "https://cal.com/p-diamond/discovery",
     "durations": [30, 45]
   },
   "routing": {
-    "support": "support@[agency].com",
-    "sales": "sales@[agency].com",
-    "default": "hello@[agency].com"
+    "support": "support@p-diamond.com",
+    "sales": "sales@p-diamond.com",
+    "default": "hello@p-diamond.com"
   },
   "upload": { "maxMb": 25, "types": ["pdf", "docx", "zip"] }
 }

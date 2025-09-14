@@ -1,6 +1,6 @@
-# Software Development Agency Marketing Site
+# Software Development P-Diamond Marketing Site
 
-A modern, high-conversion marketing website for a contractor-driven software agency specializing in Web & Mobile Engineering, Cyber Security, DevOps, Embedded Systems, and AI/ML. Built with Next.js 15, TypeScript, and Tailwind CSS v4.
+A modern, high-conversion marketing website for a contractor-driven software P-Diamond specializing in Web & Mobile Engineering, Cyber Security, DevOps, Embedded Systems, and AI/ML. Built with Next.js 15, TypeScript, and Tailwind CSS v4.
 
 ## 🎯 Project Overview
 
@@ -18,7 +18,7 @@ This marketing site generates qualified leads, streamlines quoting, and recruits
 ## 🏗️ Project Structure
 
 ```file
-agency/
+p-diamond/
 ├── app/                          # Next.js App Router
 │   ├── globals.css              # Tailwind v4 theme tokens and base styles
 │   ├── layout.tsx               # Root layout with fonts and metadata
@@ -43,7 +43,7 @@ agency/
 │   └── design/                  # Design system components
 │       └── PatternSheet.tsx    # Background pattern utility
 ├── docs/                        # Project documentation
-│   ├── software_development_agency_marketing_site_prd_v_1.md
+│   ├── software_development_p_diamond_marketing_site_prd_v_1.md
 │   └── pages/                  # Page-specific documentation
 │       ├── homepage_copy_v_1.md
 │       ├── services_service_details_copy_v_1.md
@@ -76,7 +76,7 @@ agency/
 
 ```bash
 git clone <repository-url>
-cd agency
+cd p-diamond
 ```
 
 2.Install dependencies:

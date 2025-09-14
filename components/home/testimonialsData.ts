@@ -17,7 +17,7 @@ export const testimonials: Testimonial[] = [
     title: "Designer",
     org: "Significa",
     photo: {
-      src: "https://images.unsplash.com/photo-1494790108755-2616b612c068?q=80&w=800&auto=format&fit=crop",
+      src: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=800&auto=format&fit=crop",
       alt: "Lisa Cosme, Designer at Significa",
       width: 800,
       height: 800,

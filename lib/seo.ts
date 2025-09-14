@@ -1,5 +1,6 @@
 export function absolute(path: string) {
-  const base = process.env.NEXT_PUBLIC_SITE_URL || "https://www.agency-domain.com";
+  const base =
+    process.env.NEXT_PUBLIC_SITE_URL || "https://www.p-diamond-domain.com";
   try {
     return new URL(path, base).toString();
   } catch {
@@ -10,4 +11,3 @@ export function absolute(path: string) {
 export function canonicalFor(path: string) {
   return absolute(path || "/");
 }
-
