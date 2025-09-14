@@ -23,14 +23,14 @@ export const metadata: Metadata = {
     process.env.NEXT_PUBLIC_SITE_URL || "https://www.p-diamond-domain.com"
   ),
   title: {
-    default: "Specialist Software Engineering P-Diamond",
-    template: "%s — P-Diamond",
+    default: "Specialist Software Engineering PDiamond",
+    template: "%s — PDiamond",
   },
   description:
     "Contract‑based teams for Web & Mobile, Cyber Security, DevOps, Embedded Systems, and AI/ML. Fast discovery. Quote in under 48 hours. Build with specialists, bill by the hour.",
   openGraph: {
     type: "website",
-    siteName: "P-Diamond",
+    siteName: "PDiamond",
     url: process.env.NEXT_PUBLIC_SITE_URL || "https://www.p-diamond-domain.com",
     images: "/svg/p-diamond-og-image.svg",
   },

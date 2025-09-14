@@ -1,7 +1,7 @@
 export const orgSchema = {
   "@context": "https://schema.org",
   "@type": "Organization",
-  name: "P-Diamond",
+  name: "PDiamond",
   url: process.env.NEXT_PUBLIC_SITE_URL || "https://www.p-diamond-domain.com",
   logo: `${
     process.env.NEXT_PUBLIC_SITE_URL || "https://www.p-diamond-domain.com"
@@ -15,7 +15,7 @@ export const orgSchema = {
 export const websiteSchema = {
   "@context": "https://schema.org",
   "@type": "WebSite",
-  name: "P-Diamond",
+  name: "PDiamond",
   url: process.env.NEXT_PUBLIC_SITE_URL || "https://www.p-diamond-domain.com",
   potentialAction: {
     "@type": "SearchAction",
@@ -33,7 +33,7 @@ export function serviceSchema(s: { title: string; summary: string }) {
     name: s.title,
     description: s.summary,
     areaServed: "Global",
-    provider: { "@type": "Organization", name: "P-Diamond" },
+    provider: { "@type": "Organization", name: "PDiamond" },
     offers: {
       "@type": "Offer",
       priceSpecification: {
@@ -75,7 +75,7 @@ export function caseStudySchema(c: {
     industry: c.industry?.[0],
     about: c.problem,
     result: outcomesArray,
-    author: { "@type": "Organization", name: "P-Diamond" },
+    author: { "@type": "Organization", name: "PDiamond" },
   } as const;
 }
 
@@ -97,7 +97,7 @@ export function jobPostingSchema(job: {
     employmentType: job.type,
     hiringOrganization: {
       "@type": "Organization",
-      name: "P-Diamond",
+      name: "PDiamond",
       sameAs:
         process.env.NEXT_PUBLIC_SITE_URL || "https://www.p-diamond-domain.com",
     },

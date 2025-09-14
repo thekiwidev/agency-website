@@ -1,4 +1,4 @@
-// Purpose: Site footer with oversized centered P-Diamond wordmark and link grids.
+// Purpose: Site footer with oversized centered PDiamond wordmark and link grids.
 import Link from "next/link";
 import Image from "next/image";
 
@@ -28,7 +28,7 @@ export default function Footer() {
         <div className="text-center">
           <Image
             src="/svg/p-diamond-footer-logo.svg"
-            alt="P-Diamond logo"
+            alt="PDiamond logo"
             width={800}
             height={400}
             unoptimized
@@ -53,7 +53,7 @@ export default function Footer() {
           ))}
         </div>
         <div className="mt-10 flex items-center justify-between text-xs text-white/60">
-          <p>© {new Date().getFullYear()} P-Diamond. All rights reserved.</p>
+          <p>© {new Date().getFullYear()} PDiamond. All rights reserved.</p>
           <p>
             Subscribe to Insights for engineering, security, and AI updates.
           </p>

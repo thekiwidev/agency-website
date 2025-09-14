@@ -1,12 +1,12 @@
 # Contact · Request a Quote · Book a Call — V1
 
-> Replace **P-Diamond** with your brand. Single page that unifies 6.9 (Contact/Quote) and 6.10 (Book a Call). Supports Cal.com or Calendly. All forms flow into CRM and email. Rates: **\$15–\$25/hr**.
+> Replace **PDiamond** with your brand. Single page that unifies 6.9 (Contact/Quote) and 6.10 (Book a Call). Supports Cal.com or Calendly. All forms flow into CRM and email. Rates: **\$15–\$25/hr**.
 
 ---
 
 ## SEO
 
-**Meta title**: Contact, Request a Quote, or Book a Call — P-Diamond\
+**Meta title**: Contact, Request a Quote, or Book a Call — PDiamond\
 **Meta description**: Talk to engineers today. Book a call, request a scoped quote, or send a message. Hourly pricing \$15–\$25/hr. Quote in under 48 hours after discovery.
 
 ---
@@ -161,7 +161,7 @@ Short intro: Use this for support, partnership, or general questions. For scoped
 ## Confirmation Emails (templates)
 
 **Quote request — to requester**\
-Subject: We received your request — P-Diamond\
+Subject: We received your request — PDiamond\
 Body: Thanks for the details. We’ll review and follow up within 2 business hours. Expect a scoped quote within 48 hours after the discovery call. Manage your booking here: [cal link].
 
 **Call booking — to requester**\
@@ -169,7 +169,7 @@ Subject: Your discovery call is booked — [date/time]\
 Body: You’re all set. Add agenda items or links by replying to this email.
 
 **General contact — to requester**\
-Subject: We got your message — P-Diamond\
+Subject: We got your message — PDiamond\
 Body: Thanks for reaching out. We’ll reply shortly. If you need to talk now, pick a time here: [cal link].
 
 **Internal alert**\

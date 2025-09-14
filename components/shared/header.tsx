@@ -1,4 +1,4 @@
-// Purpose: Site header with P-Diamond wordmark and navigation.
+// Purpose: Site header with PDiamond wordmark and navigation.
 import Link from "next/link";
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
@@ -17,7 +17,7 @@ export default function Header() {
         <Link href="/" className="select-none">
           <Image
             src="/svg/p-diamond-full-logo.svg"
-            alt="P-Diamond logo"
+            alt="PDiamond logo"
             width={120}
             height={32}
             unoptimized

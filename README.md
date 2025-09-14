@@ -1,6 +1,6 @@
-# Software Development P-Diamond Marketing Site
+# Software Development PDiamond Marketing Site
 
-A modern, high-conversion marketing website for a contractor-driven software P-Diamond specializing in Web & Mobile Engineering, Cyber Security, DevOps, Embedded Systems, and AI/ML. Built with Next.js 15, TypeScript, and Tailwind CSS v4.
+A modern, high-conversion marketing website for a contractor-driven software PDiamond specializing in Web & Mobile Engineering, Cyber Security, DevOps, Embedded Systems, and AI/ML. Built with Next.js 15, TypeScript, and Tailwind CSS v4.
 
 ## 🎯 Project Overview
 

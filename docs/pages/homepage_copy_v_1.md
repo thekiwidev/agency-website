@@ -1,12 +1,12 @@
 # Homepage Copy — V1
 
-> Replace **P-Diamond** with your brand name. Replace bracketed placeholders with verified data. Voice: direct, technical, outcomes‑focused.
+> Replace **PDiamond** with your brand name. Replace bracketed placeholders with verified data. Voice: direct, technical, outcomes‑focused.
 
 ---
 
 ## SEO
 
-**Meta title**: Specialist Software Engineering, Security, DevOps, Embedded, AI/ML — P-Diamond  
+**Meta title**: Specialist Software Engineering, Security, DevOps, Embedded, AI/ML — PDiamond  
 **Meta description**: Contract‑based teams for Web & Mobile, Cyber Security, DevOps, Embedded Systems, and AI/ML. Fast discovery. Quote in under 48 hours. Build with specialists, bill by the hour.
 
 ---

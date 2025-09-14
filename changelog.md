@@ -9,17 +9,17 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added - v0.3.0
 
-- P-Diamond brand rebranding across entire site
+- PDiamond brand rebranding across entire site
 - New brand assets: p-diamond-logo-landscape.svg, p-diamond-icon.svg, p-diamond-og.png
 - Service icons in hero section: PiGlobe (Web & Mobile), PiCircuitryBold (Embedded Systems), PiGear (DevOps)
 - Updated favicon and app icons to use p-diamond-icon.svg
 - Enhanced Open Graph and Twitter card images with p-diamond-og.png
-- Updated JSON-LD structured data with P-Diamond branding
+- Updated JSON-LD structured data with PDiamond branding
 - Fixed broken Unsplash testimonial image with working portrait
 
 ### Changed - v0.3.0
 
-- Global brand name replacement: "Agency" → "P-Diamond" across all copy, metadata, and schemas
+- Global brand name replacement: "Agency" → "PDiamond" across all copy, metadata, and schemas
 - Updated package.json name from "agency" to "p-diamond"
 - Header logo updated to use p-diamond-logo-landscape.svg
 - Footer logo updated to use p-diamond-footer-logo.svg with larger size
