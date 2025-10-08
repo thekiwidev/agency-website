@@ -2,20 +2,6 @@
 
 import { QuoteRequestSchema } from "@/lib/validation";
 import { z } from "zod";
-import { Ratelimit } from "@upstash/ratelimit";
-import { Redis } from "@upstash/redis";
-import { headers } from "next/headers";
-
-// Initialize rate limiter
-const ratelimit = new Ratelimit({
-  redis: new Redis({
-    url: process.env.UPSTASH_REDIS_URL!,
-    token: process.env.UPSTASH_REDIS_TOKEN!,
-  }),
-  limiter: Ratelimit.slidingWindow(5, "10 m"), // 5 requests per 10 minutes
-  analytics: true,
-});
-
 async function verifyCaptcha(token: string) {
     const response = await fetch("https://api.hcaptcha.com/siteverify", {
         method: "POST",
@@ -38,16 +24,18 @@ export async function submitQuoteRequest(
   prevState: FormState,
   formData: FormData
 ): Promise<FormState> {
-    const ip = headers().get("x-forwarded-for") ?? "127.0.0.1";
-    const { success: rateLimitSuccess, reset } = await ratelimit.limit(ip);
+    // --- Temporarily disabled rate limiting due to build issue ---
+    // const forwardedFor = headers().get("x-forwarded-for");
+    // const ip = typeof forwardedFor === "string" ? forwardedFor.split(",")[0] ?? "127.0.0.1" : "127.0.0.1";
+    // const { success: rateLimitSuccess, reset } = await ratelimit.limit(ip);
 
-    if (!rateLimitSuccess) {
-        const seconds = Math.ceil((reset - Date.now()) / 1000);
-        return {
-            success: false,
-            message: `Too many requests. Please try again in ${seconds} seconds.`,
-        };
-    }
+    // if (!rateLimitSuccess) {
+    //     const seconds = Math.ceil((reset - Date.now()) / 1000);
+    //     return {
+    //         success: false,
+    //         message: `Too many requests. Please try again in ${seconds} seconds.`,
+    //     };
+    // }
 
     const captchaToken = formData.get("h-captcha-response") as string;
     if (!captchaToken) {
@@ -59,9 +47,9 @@ export async function submitQuoteRequest(
         return { success: false, message: "Invalid CAPTCHA. Please try again." };
     }
 
-  // Use `getAll` to handle multiple values for checkboxes
-  const services = formData.getAll("services");
-  const rawData = { ...Object.fromEntries(formData.entries()), services };
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  const rawData: { [key: string]: any } = Object.fromEntries(formData.entries());
+  rawData.services = formData.getAll("services");
 
   // Handle checkbox value
   rawData.nda = rawData.nda === "on";

@@ -106,7 +106,7 @@ export function QuoteForm() {
               <input id="nda" name="nda" type="checkbox" className="h-5 w-5 mt-0.5 rounded border-gray-300 text-brand focus:ring-brand" />
               <label htmlFor="nda" className="ml-3 block text-sm text-white/80">
                   <span className="font-semibold text-white">Need an NDA?</span>
-                  <p>Check this box if you'll require a Non-Disclosure Agreement for this project.</p>
+                  <p>Check this box if you&apos;ll require a Non-Disclosure Agreement for this project.</p>
               </label>
           </div>
           <div className="space-y-4">
