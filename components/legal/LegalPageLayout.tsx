@@ -3,7 +3,6 @@ import React from "react";
 import { PatternSheet } from "../design/PatternSheet";
 import Link from "next/link";
 import LegalButton from "./LegalButton";
-import { BOOK_CALL_URL, GET_QUOTE_URL } from "@/lib/links";
 
 type LegalPageProps = {
   title: string;
@@ -111,10 +110,10 @@ export default function LegalPageLayout({
                     questions or requirements.
                   </p>
                   <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-                    <LegalButton href={GET_QUOTE_URL} variant="primary">
+                    <LegalButton href="/contact#quote" variant="primary">
                       Get a Quote
                     </LegalButton>
-                    <LegalButton href={BOOK_CALL_URL} variant="secondary">
+                    <LegalButton href="/contact#call" variant="secondary">
                       Book a Call →
                     </LegalButton>
                   </div>

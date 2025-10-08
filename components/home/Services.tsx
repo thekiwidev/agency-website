@@ -2,8 +2,6 @@
 // Purpose: Dark mosaic services section with offset imagery and CTA glow.
 
 import Image from "next/image";
-import Link from "next/link";
-import { BOOK_CALL_URL } from "@/lib/links";
 import { Button } from "@/components/ui/button";
 
 type Card = {
@@ -182,11 +180,12 @@ export default function Services() {
         <div className="mt-16 text-center">
           <Button
             asChild
+            href="/contact#call"
             className="px-6 py-4 font-semibold bg-white !text-black hover:bg-white/90 hover:!text-black"
           >
-            <Link href={BOOK_CALL_URL}>
+            <span>
               Not sure where to start? Book a Call
-            </Link>
+            </span>
           </Button>
         </div>
       </div>

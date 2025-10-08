@@ -17,17 +17,21 @@ export default function FinalCTA() {
 
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
           <Button
+            asChild
+            href="/contact#quote"
             size="lg"
             className="bg-white text-navy-800 hover:bg-white/90 font-semibold px-8 py-4 text-lg"
           >
-            Get a Quote
+            <span>Get a Quote</span>
           </Button>
           <Button
+            asChild
+            href="/contact#call"
             variant="secondary"
             size="lg"
             className="border-white/20 text-white hover:bg-white/10 font-semibold px-8 py-4 text-lg"
           >
-            Book a Call →
+            <span>Book a Call →</span>
           </Button>
         </div>
 

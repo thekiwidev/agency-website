@@ -1,6 +1,4 @@
 import { Button } from "@/components/ui/button";
-import Link from "next/link";
-import { BOOK_CALL_URL, GET_QUOTE_URL } from "@/lib/links";
 
 export default function FAQFinalCTA() {
   return (
@@ -37,11 +35,11 @@ export default function FAQFinalCTA() {
         </div>
 
         <div className="mt-12 flex gap-3">
-          <Button asChild>
-            <Link href={GET_QUOTE_URL}>Get a Quote</Link>
+          <Button asChild href="/contact#quote">
+            <span>Get a Quote</span>
           </Button>
-          <Button asChild variant="secondary">
-            <Link href={BOOK_CALL_URL}>Book a Call</Link>
+          <Button asChild href="/contact#call" variant="secondary">
+            <span>Book a Call</span>
           </Button>
         </div>
       </div>

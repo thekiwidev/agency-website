@@ -1,7 +1,6 @@
 "use client";
 
 import Link from "next/link";
-import { BOOK_CALL_URL } from "@/lib/links";
 import { Button } from "@/components/ui/button";
 import { useState } from "react";
 
@@ -60,7 +59,7 @@ export default function Error({ error, reset }: { error: Error & { digest?: stri
               Case Studies
             </Link>
             <span className="text-white/30">•</span>
-            <Link className="underline decoration-white/30 hover:decoration-white" href={BOOK_CALL_URL}>
+            <Link className="underline decoration-white/30 hover:decoration-white" href="/contact#call">
               Book a Call
             </Link>
           </div>

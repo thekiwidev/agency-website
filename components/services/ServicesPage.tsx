@@ -11,7 +11,6 @@ import { track } from "@/components/analytics/events";
 import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
 import { ChevronDown } from "lucide-react";
-import { BOOK_CALL_URL, GET_QUOTE_URL } from "@/lib/links";
 
 function useHashSelection() {
   const [selected, setSelected] = useState<ServiceKey | null>(null);
@@ -254,25 +253,23 @@ function ServicePanel({
           ) : null}
         </div>
         <div className="p-4 border-t border-white/10 flex gap-2">
-          <Button asChild>
-            <a
-              href={GET_QUOTE_URL}
+          <Button asChild href="/contact#quote">
+            <span
               onClick={() =>
                 track?.("service_cta_clicked", { service: s.key, cta: "quote" })
               }
             >
               Get a Quote
-            </a>
+            </span>
           </Button>
-          <Button asChild variant="secondary">
-            <a
-              href={BOOK_CALL_URL}
+          <Button asChild href="/contact#call" variant="secondary">
+            <span
               onClick={() =>
                 track?.("service_cta_clicked", { service: s.key, cta: "call" })
               }
             >
               Book a Call
-            </a>
+            </span>
           </Button>
         </div>
       </motion.div>
@@ -301,11 +298,11 @@ export default function ServicesPage() {
             default.
           </p>
           <div className="mt-6 flex flex-wrap gap-3">
-            <Button asChild>
-              <a href={GET_QUOTE_URL}>Get a Quote</a>
+            <Button asChild href="/contact#quote">
+              <span>Get a Quote</span>
             </Button>
-            <Button asChild variant="secondary">
-              <a href={BOOK_CALL_URL}>Book a Call</a>
+            <Button asChild href="/contact#call" variant="secondary">
+              <span>Book a Call</span>
             </Button>
           </div>
           <div className="mt-6 flex flex-wrap gap-2 text-xs text-white/70">
@@ -348,8 +345,8 @@ export default function ServicesPage() {
               <div className="text-white/85 text-sm">
                 Not sure where to start?
               </div>
-              <Button asChild variant="secondary">
-                <a href={BOOK_CALL_URL}>Book a Call</a>
+              <Button asChild href="/contact#call" variant="secondary">
+                <span>Book a Call</span>
               </Button>
             </div>
           </div>
@@ -392,11 +389,11 @@ export default function ServicesPage() {
           <div className="bg-navy-800 border border-white/10 rounded-2xl p-5 flex flex-wrap items-center justify-between gap-3">
             <div className="text-white/85 text-base">Ready to move?</div>
             <div className="flex gap-2">
-              <Button asChild>
-                <a href={GET_QUOTE_URL}>Get a Quote</a>
+              <Button asChild href="/contact#quote">
+                <span>Get a Quote</span>
               </Button>
-              <Button asChild variant="secondary">
-                <a href={BOOK_CALL_URL}>Prefer to talk? Book a Call</a>
+              <Button asChild href="/contact#call" variant="secondary">
+                <span>Prefer to talk? Book a Call</span>
               </Button>
             </div>
           </div>
