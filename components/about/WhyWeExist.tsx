@@ -4,7 +4,6 @@ import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import Link from "next/link";
-import { BOOK_CALL_URL, GET_QUOTE_URL } from "@/lib/links";
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -155,18 +154,20 @@ export default function WhyWeExist() {
               <div className="mt-10 flex flex-wrap gap-3">
                 <Button
                   asChild
+                  href="/contact#quote"
                   size="lg"
                   aria-label="Get a quote for our engineering services"
                 >
-                  <Link href={GET_QUOTE_URL}>Get a Quote</Link>
+                  <span>Get a Quote</span>
                 </Button>
                 <Button
                   asChild
+                  href="/contact#call"
                   variant="secondary"
                   size="lg"
                   aria-label="Book a call to discuss your project"
                 >
-                  <Link href={BOOK_CALL_URL}>Book a Call</Link>
+                  <span>Book a Call</span>
                 </Button>
               </div>
             </motion.div>

@@ -2,7 +2,6 @@
 
 import { Button } from "@/components/ui/button";
 import { processSteps } from "./processData";
-import { GET_QUOTE_URL } from "@/lib/links";
 import { useProcessCarousel } from "./useProcessCarousel";
 import { ProcessList } from "./ProcessList";
 import { ProcessMedia } from "./ProcessMedia";
@@ -89,7 +88,9 @@ export function ProcessSection() {
 
         {/* CTA */}
         <div className="text-center mt-16">
-          <Button asChild href={GET_QUOTE_URL}>Get a Quote</Button>
+          <Button asChild href="/contact#quote">
+            <span>Get a Quote</span>
+          </Button>
         </div>
       </div>
     </section>

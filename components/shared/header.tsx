@@ -2,7 +2,6 @@
 import Link from "next/link";
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
-import { GET_QUOTE_URL } from "@/lib/links";
 
 const nav = [
   { href: "/case-studies", label: "Case Studies" },
@@ -36,7 +35,7 @@ export default function Header() {
           ))}
         </nav>
         <div className="flex items-center">
-          <Button asChild href={GET_QUOTE_URL} size="sm">
+          <Button asChild href="/contact#quote" size="sm">
             <span>Get a Quote</span>
           </Button>
         </div>

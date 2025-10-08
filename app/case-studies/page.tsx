@@ -6,7 +6,6 @@ import { Breadcrumbs } from "@/components/seo/Breadcrumbs";
 import { caseStudies, caseStudyFilters } from "@/components/home/caseData";
 import FAQSection from "@/components/home/FAQSection";
 import FinalCTA from "@/components/home/FinalCTA";
-import { BOOK_CALL_URL, GET_QUOTE_URL } from "@/lib/links";
 
 export const metadata: Metadata = {
   title: "Case Studies — Proven outcomes in Web/Mobile, Security, DevOps, Embedded, AI/ML",
@@ -54,11 +53,11 @@ export default function CaseStudiesListingPage() {
             </ul>
 
             <div className="flex flex-wrap gap-3">
-              <Button asChild variant="primary">
-                <a href={GET_QUOTE_URL}>Get a Quote</a>
+              <Button asChild href="/contact#quote" variant="primary">
+                <span>Get a Quote</span>
               </Button>
-              <Button asChild variant="secondary">
-                <a href={BOOK_CALL_URL}>Book a Call</a>
+              <Button asChild href="/contact#call" variant="secondary">
+                <span>Book a Call</span>
               </Button>
             </div>
           </div>

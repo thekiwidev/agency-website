@@ -1,5 +1,4 @@
 import { Button } from "@/components/ui/button";
-import { BOOK_CALL_URL, GET_QUOTE_URL } from "@/lib/links";
 import Image from "next/image";
 import { PATTERN_GLYPHS_80, PatternSheet } from "../design/PatternSheet";
 import { PiGlobe, PiCircuitryBold, PiGear } from "react-icons/pi";
@@ -72,16 +71,17 @@ export default function Hero() {
               </p>
 
               <div className="mt-7 flex flex-wrap gap-3">
-                <Button asChild size="lg" className="px-6 py-4">
-                  <a href={GET_QUOTE_URL}>Get a Quote</a>
+                <Button asChild href="/contact#quote" size="lg" className="px-6 py-4">
+                  <span>Get a Quote</span>
                 </Button>
                 <Button
                   asChild
+                  href="/contact#call"
                   size="lg"
                   variant="secondary"
                   className="px-6 py-4"
                 >
-                  <a href={BOOK_CALL_URL}>Book a Call</a>
+                  <span>Book a Call</span>
                 </Button>
               </div>
             </div>
