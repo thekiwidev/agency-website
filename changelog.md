@@ -5,6 +5,33 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.4.0] - 2026-07-29
+
+### Added - v0.4.0
+
+- `AboutSection` component (`components/home/AboutSection.tsx`) with `id="about"` on homepage highlighting US registration, team footprint, and delivery metrics
+- Jersey20 local font (`Jersey20-Regular.ttf`) integration in `app/layout.tsx` and `app/globals.css` (`.font-jersey`)
+- Single-page section anchor navigation (`#services`, `#process`, `#about`, `#faq`) across Header and Footer
+
+### Changed - v0.4.0
+
+- Converted website to a single-page architecture with section anchor navigation
+- Narrowed company focus to Websites, Web Apps, and Mobile Apps across Hero section copy, icons, and chips
+- Re-architected homepage Services section (`components/home/Services.tsx`) into 3 core service cards (Website, Web App, Mobile App)
+- Updated footer layout and branding text to use Jersey20 font (`Pdiamond`)
+- Centralized consultation booking link to `https://cal.com/pdiamond/consultation` in `lib/links.ts`
+- Updated 404 page navigation to link to single-page section anchors
+
+### Removed - v0.4.0
+
+- Removed Trust logo clouds section (`<Trust />`) from homepage
+- Removed Case Studies highlight section (`<CaseHighlight />`) from homepage
+- Removed all active internal subpage routes (`/about-us`, `/services`, `/case-studies`, `/contractors`, `/insights`, etc.) from Header and Footer
+
+### Fixed - v0.4.0
+
+- Fixed React Turbopack CSP `eval()` console error in development by adding `'unsafe-eval'` to `script-src` in `next.config.ts`
+
 ## [0.3.0] - 2025-09-14
 
 ### Added - v0.3.0

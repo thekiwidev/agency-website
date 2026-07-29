@@ -4,6 +4,7 @@ import { useState } from "react";
 import { ChevronDown } from "lucide-react";
 import { faqs } from "./faqData";
 import { Button } from "../ui/button";
+import { BOOK_CALL_URL, GET_QUOTE_URL } from "@/lib/links";
 
 /**
  * FAQSection
@@ -19,7 +20,7 @@ export default function FAQSection() {
   };
 
   return (
-    <section className="py-16 md:py-24 bg-navy-900">
+    <section id="faq" className="py-16 md:py-24 bg-navy-900">
       <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-12">
@@ -85,8 +86,12 @@ export default function FAQSection() {
             Still have questions? We&apos;d love to discuss your specific needs.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button>Get a Quote</Button>
-            <Button variant="secondary">Book a Call</Button>
+            <Button asChild>
+              <a href={GET_QUOTE_URL}>Get a Quote</a>
+            </Button>
+            <Button asChild variant="secondary">
+              <a href={BOOK_CALL_URL}>Book a Call</a>
+            </Button>
           </div>
         </div>
       </div>

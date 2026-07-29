@@ -70,6 +70,18 @@ body {
   letter-spacing: 0.02em;
 }
 
+/* Local Jersey20 font for giant footer display text */
+@font-face {
+  font-family: "Jersey20";
+  src: url("/fonts/Jersey20-Regular.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+.font-jersey {
+  font-family: var(--font-jersey20), Jersey20, monospace;
+}
+
 /* Custom utility using tokens (oklch mix allowed) */
 .bg-brand-sphere {
   background: radial-gradient(

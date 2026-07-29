@@ -27,7 +27,10 @@ export function useProcessCarousel({
   intervalMs = 5000,
 }: UseProcessCarouselProps): UseProcessCarouselReturn {
   const [activeIndex, setActiveIndex] = useState(startIndex);
-  const [isPaused, setIsPaused] = useState(false);
+  const [isPaused, setIsPaused] = useState(() => {
+    if (typeof window === "undefined") return false;
+    return window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  });
   const [isInView, setIsInView] = useState(false);
   const [wasRunningBeforeHover, setWasRunningBeforeHover] = useState(false);
 
@@ -157,16 +160,6 @@ export function useProcessCarousel({
 
     return () => stopAutoplay();
   }, [isInView, isPaused, startAutoplay, stopAutoplay]);
-
-  // Check for reduced motion preference
-  useEffect(() => {
-    const prefersReducedMotion = window.matchMedia(
-      "(prefers-reduced-motion: reduce)"
-    ).matches;
-    if (prefersReducedMotion) {
-      setIsPaused(true);
-    }
-  }, []);
 
   // Cleanup on unmount
   useEffect(() => {

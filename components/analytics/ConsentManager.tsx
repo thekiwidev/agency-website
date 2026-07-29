@@ -2,14 +2,14 @@
 import { useEffect, useState } from "react";
 
 export function ConsentManager() {
-  const [consent, setConsent] = useState<null | boolean>(null);
-
-  useEffect(() => {
+  const [consent, setConsent] = useState<null | boolean>(() => {
+    if (typeof window === "undefined") return null;
     try {
       const stored = localStorage.getItem("analytics_consent");
-      if (stored !== null) setConsent(stored === "true");
+      if (stored !== null) return stored === "true";
     } catch {}
-  }, []);
+    return null;
+  });
 
   useEffect(() => {
     if (consent === null) return;

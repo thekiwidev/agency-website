@@ -2,11 +2,16 @@
 import React from "react";
 
 export function StructuredData({ data }: { data: Record<string, unknown> | Record<string, unknown>[] }) {
+  const items = Array.isArray(data) ? data : [data];
   return (
-    <script
-      type="application/ld+json"
-      // stringify once to avoid hydration mismatches
-      dangerouslySetInnerHTML={{ __html: JSON.stringify(data) }}
-    />
+    <>
+      {items.map((item, idx) => (
+        <script
+          key={idx}
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(item) }}
+        />
+      ))}
+    </>
   );
 }

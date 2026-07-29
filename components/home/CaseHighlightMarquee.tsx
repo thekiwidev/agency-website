@@ -21,7 +21,11 @@ export function CaseHighlightMarquee({
   paused = false,
 }: CaseHighlightMarqueeProps) {
   const [shellWidth, setShellWidth] = useState(0);
-  const [reducedMotion, setReducedMotion] = useState(false);
+  const [rowWidth, setRowWidth] = useState(0);
+  const [reducedMotion, setReducedMotion] = useState(() => {
+    if (typeof window === "undefined") return false;
+    return window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  });
 
   // RAF state refs
   const speedRef = useRef(speed);
@@ -49,8 +53,6 @@ export function CaseHighlightMarquee({
   // Check for reduced motion preference
   useEffect(() => {
     const mediaQuery = window.matchMedia("(prefers-reduced-motion: reduce)");
-    setReducedMotion(mediaQuery.matches);
-
     const handleChange = (e: MediaQueryListEvent) =>
       setReducedMotion(e.matches);
     mediaQuery.addEventListener("change", handleChange);
@@ -72,9 +74,11 @@ export function CaseHighlightMarquee({
     const gap = 32; // 8 * 4 = 32px gap on desktop, 6 * 4 = 24px on mobile
     const actualRowWidth = items.length * (cardWidth + gap) - gap;
     rowWRef.current = actualRowWidth;
+    setRowWidth(actualRowWidth);
   }, [items.length]);
 
   // RAF animation step
+  const stepRef = useRef<(ts: number) => void>(() => {});
   const step = useCallback(
     (timestamp: number) => {
       if (!lastTsRef.current) lastTsRef.current = timestamp;
@@ -98,11 +102,15 @@ export function CaseHighlightMarquee({
       }
 
       if (!reducedMotion && !pausedRef.current) {
-        rafRef.current = requestAnimationFrame(step);
+        rafRef.current = requestAnimationFrame((ts) => stepRef.current(ts));
       }
     },
     [reducedMotion]
   );
+
+  useEffect(() => {
+    stepRef.current = step;
+  }, [step]);
 
   // Start/stop animation
   useEffect(() => {
@@ -115,7 +123,7 @@ export function CaseHighlightMarquee({
     }
 
     measure();
-    rafRef.current = requestAnimationFrame(step);
+    rafRef.current = requestAnimationFrame((ts) => stepRef.current(ts));
 
     return () => {
       if (rafRef.current) {
@@ -123,7 +131,7 @@ export function CaseHighlightMarquee({
         rafRef.current = null;
       }
     };
-  }, [reducedMotion, paused, step, measure]);
+  }, [reducedMotion, paused, measure]);
 
   // Handle resize
   useEffect(() => {
@@ -136,7 +144,7 @@ export function CaseHighlightMarquee({
   const safetyMargin = 400; // Increased margin for smooth wrapping
   const duplicatesNeeded = Math.max(
     3, // Minimum 3 copies
-    Math.ceil((shellWidth + safetyMargin) / Math.max(rowWRef.current, 1)) + 1
+    Math.ceil((shellWidth + safetyMargin) / Math.max(rowWidth, 1)) + 1
   );
   const allItems = Array.from({ length: duplicatesNeeded }, () => items).flat();
 

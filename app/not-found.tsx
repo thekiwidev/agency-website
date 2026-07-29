@@ -15,7 +15,7 @@ export default function NotFound() {
 
         <h1 className="text-4xl md:text-5xl font-bold tracking-tight">We couldn’t find that page</h1>
         <p className="mt-4 text-white/80 text-lg">
-          The link may be broken or the page may have moved. Try one of these paths.
+          The link may be broken or the page may have moved. Return to our homepage.
         </p>
 
         <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-3">
@@ -23,22 +23,22 @@ export default function NotFound() {
             <Link href="/">Go to Homepage</Link>
           </Button>
           <Button asChild variant="secondary">
-            <Link href="/case-studies">Browse Case Studies</Link>
+            <a href={GET_QUOTE_URL}>Get a Quote</a>
           </Button>
         </div>
 
         <div className="mt-10 text-sm text-white/70">
           <div className="flex flex-wrap items-center justify-center gap-4">
             <Link className="underline decoration-white/30 hover:decoration-white" href="/#services">
-              Our Services
+              Services
             </Link>
             <span className="text-white/30">•</span>
-            <Link className="underline decoration-white/30 hover:decoration-white" href="/about-us">
+            <Link className="underline decoration-white/30 hover:decoration-white" href="/#process">
+              Process
+            </Link>
+            <span className="text-white/30">•</span>
+            <Link className="underline decoration-white/30 hover:decoration-white" href="/#about">
               About Us
-            </Link>
-            <span className="text-white/30">•</span>
-            <Link className="underline decoration-white/30 hover:decoration-white" href={GET_QUOTE_URL}>
-              Get a Quote
             </Link>
           </div>
         </div>

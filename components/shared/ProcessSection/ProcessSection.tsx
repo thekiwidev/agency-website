@@ -17,6 +17,7 @@ export function ProcessSection() {
 
   return (
     <section
+      id="process"
       ref={bindInViewRef}
       className="py-16 md:py-24 bg-navy-900 text-white"
     >

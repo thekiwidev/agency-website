@@ -2,7 +2,7 @@ import { Button } from "@/components/ui/button";
 import { BOOK_CALL_URL, GET_QUOTE_URL } from "@/lib/links";
 import Image from "next/image";
 import { PATTERN_GLYPHS_80, PatternSheet } from "../design/PatternSheet";
-import { PiGlobe, PiCircuitryBold, PiGear } from "react-icons/pi";
+import { Globe, Layout, Smartphone } from "lucide-react";
 
 export default function Hero() {
   return (
@@ -52,9 +52,9 @@ export default function Hero() {
             <div className="lg:col-span-4">
               <div className="flex -space-x-2 mb-5">
                 {[
-                  { icon: PiGlobe, label: "Web & Mobile" },
-                  { icon: PiCircuitryBold, label: "Embedded Systems" },
-                  { icon: PiGear, label: "DevOps" },
+                  { icon: Globe, label: "Website" },
+                  { icon: Layout, label: "Web App" },
+                  { icon: Smartphone, label: "Mobile App" },
                 ].map(({ icon: Icon, label }, i) => (
                   <div
                     key={i}
@@ -92,7 +92,7 @@ export default function Hero() {
                 Ship critical software with specialist engineers
               </h1>
               <p className="mt-5 max-w-3xl text-base/7 text-white/85">
-                Web &amp; Mobile, Cyber Security, DevOps, Embedded, and AI/ML.
+                Bespoke Websites, Web Applications, and Mobile Applications.
                 Contract-based delivery. Hourly billing. Discovery today, scoped
                 quote within 48 hours.
               </p>

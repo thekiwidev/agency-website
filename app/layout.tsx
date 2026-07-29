@@ -18,6 +18,13 @@ const mooxy = localFont({
   weight: "400",
 });
 
+const jersey20 = localFont({
+  src: "../public/fonts/Jersey20-Regular.ttf",
+  variable: "--font-jersey20",
+  display: "swap",
+  weight: "400",
+});
+
 export const metadata: Metadata = {
   metadataBase: new URL(
     process.env.NEXT_PUBLIC_SITE_URL || "https://www.p-diamond-domain.com"
@@ -63,7 +70,7 @@ export default function RootLayout({
         <meta name="twitter:image" content="/svg/p-diamond-og-image.svg" />
       </head>
       <body
-        className={`${sen.variable} ${mooxy.variable} antialiased min-h-screen flex flex-col bg-navy-900 text-white`}
+        className={`${sen.variable} ${mooxy.variable} ${jersey20.variable} antialiased min-h-screen flex flex-col bg-navy-900 text-white`}
       >
         <Header />
         <main className="flex-1">{children}</main>

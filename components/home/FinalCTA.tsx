@@ -1,5 +1,6 @@
 // Purpose: Final CTA strip with compelling copy and gradient background.
 import { Button } from "@/components/ui/button";
+import { BOOK_CALL_URL, GET_QUOTE_URL } from "@/lib/links";
 
 export default function FinalCTA() {
   return (
@@ -17,17 +18,19 @@ export default function FinalCTA() {
 
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
           <Button
+            asChild
             size="lg"
             className="bg-white text-navy-800 hover:bg-white/90 font-semibold px-8 py-4 text-lg"
           >
-            Get a Quote
+            <a href={GET_QUOTE_URL}>Get a Quote</a>
           </Button>
           <Button
+            asChild
             variant="secondary"
             size="lg"
             className="border-white/20 text-white hover:bg-white/10 font-semibold px-8 py-4 text-lg"
           >
-            Book a Call →
+            <a href={BOOK_CALL_URL}>Book a Call →</a>
           </Button>
         </div>
 

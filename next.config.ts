@@ -46,8 +46,8 @@ const nextConfig: NextConfig = {
             key: "Content-Security-Policy",
             value: [
               "default-src 'self'",
-              // Allow inline only for styles; scripts restricted to known analytics
-              "script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://plausible.io",
+              // Allow inline & eval for dev/HMR; scripts restricted to known analytics
+              "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com https://plausible.io",
               "connect-src 'self' https://plausible.io https://www.google-analytics.com",
               "img-src 'self' data: https:",
               "style-src 'self' 'unsafe-inline'",

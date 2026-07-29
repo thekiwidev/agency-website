@@ -1,20 +1,20 @@
-// Purpose: Site header with PDiamond wordmark and navigation.
-import Link from "next/link";
+// Purpose: Site header with PDiamond wordmark and single-page section navigation.
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { GET_QUOTE_URL } from "@/lib/links";
 
 const nav = [
-  { href: "/case-studies", label: "Case Studies" },
-  { href: "/services", label: "Services" },
-  { href: "/about-us", label: "About" },
+  { href: "#services", label: "Services" },
+  { href: "#process", label: "Process" },
+  { href: "#about", label: "About" },
+  { href: "#faq", label: "FAQ" },
 ];
 
 export default function Header() {
   return (
-    <header className="z-50 bg-navy-900 border-b border-white/10">
+    <header className="sticky top-0 z-50 bg-navy-900/90 backdrop-blur-md border-b border-white/10">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
-        <Link href="/" className="select-none">
+        <a href="#" className="select-none">
           <Image
             src="/svg/p-diamond-full-logo.svg"
             alt="PDiamond logo"
@@ -22,22 +22,22 @@ export default function Header() {
             height={32}
             unoptimized
           />
-        </Link>
+        </a>
         {/* Nav aligned to the right, next to CTA on desktop */}
         <nav className="hidden md:flex ml-auto mr-8 gap-6 text-sm">
           {nav.map((n) => (
-            <Link
+            <a
               key={n.href}
               href={n.href}
-              className="text-white/80 hover:text-white transition-colors"
+              className="text-white/80 hover:text-white transition-colors font-medium"
             >
               {n.label}
-            </Link>
+            </a>
           ))}
         </nav>
         <div className="flex items-center">
-          <Button asChild href={GET_QUOTE_URL} size="sm">
-            <span>Get a Quote</span>
+          <Button asChild size="sm">
+            <a href={GET_QUOTE_URL}>Get a Quote</a>
           </Button>
         </div>
       </div>

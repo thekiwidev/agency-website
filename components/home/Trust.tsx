@@ -22,10 +22,10 @@ import {
   SiLinear,
   SiNotion,
   SiCloudflare,
-  SiSlack,
   SiGithub,
   SiSega,
 } from "react-icons/si";
+import { FaSlack } from "react-icons/fa6";
 
 type Logo = {
   name: string;
@@ -39,7 +39,7 @@ const LOGOS: Logo[] = [
   { name: "Sega", icon: SiSega, href: "https://sega.com" },
   { name: "Linear", icon: SiLinear, href: "https://linear.app" },
   { name: "Notion", icon: SiNotion, href: "https://www.notion.so" },
-  { name: "Slack", icon: SiSlack, href: "https://slack.com" },
+  { name: "Slack", icon: FaSlack, href: "https://slack.com" },
   { name: "Cloudflare", icon: SiCloudflare, href: "https://cloudflare.com" },
   { name: "GitHub", icon: SiGithub, href: "https://github.com" },
 ];
